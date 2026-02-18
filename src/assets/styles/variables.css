@@ -1,3 +1,9 @@
+/*
+  * color variables for the project
+  * tipography and spacing variables can be added here as well
+  * breakpoints can be added here as well, but I prefer to use media queries directly in the components
+
+*/
 @import './base.css';
 
 #app {
