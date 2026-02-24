@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "acma-portfolio-asturias"
-  }
+    "default": "acma-portfolio-asturias",
+    "portfolio-vue.js": "acma-portfolio-asturias"
+  },
+  "targets": {},
+  "etags": {}
 }
