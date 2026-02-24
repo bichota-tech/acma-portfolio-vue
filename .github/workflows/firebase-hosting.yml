@@ -28,6 +28,15 @@ jobs:
       # 4. Construir Vue 3
       - name: Build Vue app
         run: npm run build
+      
+      - name: Check service account secret is present
+        run: |
+          if [ -z "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}" ]; then
+            echo "FIREBASE_SERVICE_ACCOUNT is empty"
+             exit 1
+          fi
+          echo "FIREBASE_SERVICE_ACCOUNT length: 
+          ${#FIREBASE_SERVICE_ACCOUNT}"
 
       # 5. Deploy a Firebase Hosting
       - name: Deploy to Firebase
