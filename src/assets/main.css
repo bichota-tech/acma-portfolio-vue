@@ -1,4 +1,8 @@
-body {
-    margin: 0;
-    font-family: sans-serif;
-}
+
+@import './styles/reset.css';
+@import './styles/variables.css';
+@import './styles/base.css';
+@import './styles/theme-dark.css';
+@import './styles/layout.css';
+@import './styles/utilities.css';
+@import './styles/media-queries.css';

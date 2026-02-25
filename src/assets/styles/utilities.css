@@ -1,4 +1,4 @@
-/*
-    *   helpers can be added here, such as margin and padding utilities, text alignment utilities, etc.
-    *   these utilities can be used in the components to avoid repeating code and to keep the components clean
-*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
