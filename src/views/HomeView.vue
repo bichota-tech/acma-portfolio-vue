@@ -1,13 +1,18 @@
 <template>
-  <section>
-    <HeroSection />
-    <SkillsSection />
-    <ProjectsSection />
+  <section class="home">
+    <h1>Bienvenido a mi Portfolio</h1>
+    <p>Explora mis proyectos, habilidades y experiencia profesional.</p>
   </section>
 </template>
 
 <script setup>
-import HeroSection from '@/components/home/HeroSection.vue'
-import SkillsSection from '@/components/home/SkillsSection.vue'
-import ProjectsSection from '@/components/home/ProjectsSection.vue'
 </script>
+
+<style scoped>
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+</style>
