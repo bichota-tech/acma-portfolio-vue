@@ -12,10 +12,10 @@ app.use(createPinia()) // Configura Pinia como el sistema de gestión de estado 
 app.use(router) // Configura Vue Router para manejar la navegación entre vistas en la aplicación
 
 // Monta la aplicación en el index con id 'app'
-app.mount('#app') 
+app.mount('#app')
 
 // Aplica el theme inicial
-import { useThemeStore } from './stores/theme'
+import { useThemeStore } from './stores/theme.js'
 const themeStore = useThemeStore()
 if (themeStore.isDark) {
     document.body.classList.add('dark-mode')

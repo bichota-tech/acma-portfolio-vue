@@ -1,4 +1,22 @@
-.container {
+@import './variables.css';
+
+section {
     max-width: 1200px;
     margin: 0 auto;
+    gap: var(--section-gap);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  /* Títulos compactos y "arquitectónicos" */
+}
+
+p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  /* Mejor legibilidad en párrafos */
 }

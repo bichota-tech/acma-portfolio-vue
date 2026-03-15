@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import { useThemeStore } from '@/stores/theme'
+import { useThemeStore } from '@/stores/theme.js'
 const theme = useThemeStore()
 const toggleTheme = () => theme.toggleTheme()
 </script>
@@ -17,7 +17,7 @@ const toggleTheme = () => theme.toggleTheme()
 <style scoped>
 .toggle-dark-mode {
   background: none;
-  border: 2px solid var(--color-border);
+  border-color: 2px solid var(--color-border);
   border-radius: 0.5rem;
   padding: 0.25rem 0.5rem;
   cursor: pointer;

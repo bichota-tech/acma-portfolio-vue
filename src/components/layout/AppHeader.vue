@@ -1,10 +1,7 @@
 <template>
   <header>
     <nav  role="navigation" aria-label="Navegación principal">
-      <div class="logo">
-                <a class="navbar-brand-symbol neon" href="#inicio" aria-label="ACMA - Ir a inicio">//</a>
-                <a class="navbar-brand" href="#inicio">ACMA</a>
-            </div>
+      <IdentityLogo/>
       <ul>
         <li><router-link to="/">Inicio</router-link></li>
         <li><router-link to="/proyectos">Proyectos</router-link></li>
@@ -17,5 +14,17 @@
 </template>
 
 <script setup>
+import IdentityLogo from '@/components/ui/IdentityLogo.vue'
 import ToggleDarkMode from '@/components/ui/ToggleDarkMode.vue'
 </script>
+
+<style scoped>
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--color-midnight);
+  color: var(--color-smoke);
+}
+</style>

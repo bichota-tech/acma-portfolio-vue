@@ -1,40 +1,59 @@
+/* Importación de Space Grotesk de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap');
+
+/* Sistema de Diseño //ACMA */
 :root {
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
+  /* --- Paleta de Colores --- */
+  --color-smoke: #F4F4F9;
+    /* Dominante (60%) - Fondos claros */
+  --color-midnight: #0A1128;
+  /* Texto principal (30%) - Alta legibilidad */
+  --color-terracota: #E07A5F;
+  /* Acento (10%) - Barras //, botones y hover */
+  --color-slate-light: #3D5A80;
+  /* Apoyo - Bordes sutiles y texto secundario */
+  --color-slate-dark: #2c3e50;
+  /* Apoyo - Bordes y fondos secundarios */
 
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
+  /* --- Modo Claro --- */
+  --color-primary: var(--color-smoke);
+    /* Dominante (60%) - Fondos claros */
+  --color-secondary: var(--color-terracota);
+    /* Acento (10%) - Barras //, botones y hover */
+  --color-background: var(--color-smoke);
+    /* Fondo principal */
+  --color-background-secondary: var(--color-slate-light);
+    /* Fondo secundario para secciones o tarjetas */
+  --color-border: var(--color-slate-light);
+    /* Borde */
+  --color-border-hover: var(--color-slate-dark);
+    /* Borde en hover */
+  --color-text: var(--color-midnight);
+    /* Texto principal */
+  --color-heading: var(--color-midnight);
+    /* Color de los títulos */
 
-  --vt-c-indigo: #2c3e50;
 
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  /* --- Tipografías --- */
+  --font-primary: 'Space Grotesk', sans-serif;
+  /* Para Titulares y Logo */
+  --font-secondary: 'Inter', sans-serif;
+  /* Para Cuerpo de texto y UI */
 
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  /* --- Pesos Tipográficos --- */
+  --font-weight-regular: 400;
+  /* Párrafos */
+  --font-weight-medium: 500;
+  /* Botones y etiquetas */
+  --font-weight-semibold: 600;
+  /* Subtítulos */
+  --font-weight-bold: 700;
+  /* Logo y Titulares H1/H2 */
+
+  /* --- Espaciado --- */
+  --section-gap: 3rem;
+  --cards-gap: 1.5rem;
 }
-
-/* semantic color variables for this project */
-:root {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
-
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
-
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
-
-  --section-gap: 160px;
-}
-
 
 
 
