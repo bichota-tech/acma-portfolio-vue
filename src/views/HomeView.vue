@@ -14,5 +14,6 @@
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
+  background-color: var(--color-primary);
 }
 </style>

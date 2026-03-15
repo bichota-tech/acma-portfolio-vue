@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import { useThemeStore } from '@/stores/theme.js'
+import { useThemeStore } from '@/stores/theme'
 const theme = useThemeStore()
 const toggleTheme = () => theme.toggleTheme()
 </script>

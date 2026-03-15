@@ -1,22 +1,21 @@
 @import url('./variables.css');
 
-@media (prefers-color-scheme: dark) {
-   body:not(.dark-theme) {
-        --color-primary: var(--color-midnight);
-          /* Dominante (60%) - Fondos oscuros */
-        --color-secondary: var(--color-terracota);
-          /* Acento (10%) - Barras //, botones y hover */
-        --color-background: var(--color-midnight);
-          /* Fondo principal */
-        --color-background-secondary: var(--color-slate-dark);
-          /* Fondo secundario para secciones o tarjetas */
-        --color-border: var(--color-slate-dark);
-          /* Borde */
-        --color-border-hover: var(--color-slate-light);
-          /* Borde en hover */
-        --color-text: var(--color-smoke);
-          /* Texto principal */
-        --color-heading: var(--color-smoke);
-          /* Color de los títulos */
-    }
+[data-theme="dark"] {
+    --color-primary: var(--color-midnight);
+      /* Dominante (60%) - Fondos oscuros */
+    --color-secondary: var(--color-terracota);
+      /* Acento (10%) - Barras //, botones y hover */
+    --color-background: var(--color-midnight);
+      /* Fondo principal */
+    --color-background-secondary: var(--color-slate-dark);
+      /* Fondo secundario para secciones o tarjetas */
+    --color-border: var(--color-slate-dark);
+      /* Borde */
+    --color-border-hover: var(--color-slate-light);
+      /* Borde en hover */
+    --color-text: var(--color-smoke);
+      /* Texto principal */
+    --color-heading: var(--color-smoke);
+      /* Color de los títulos */
 }
+

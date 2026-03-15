@@ -19,6 +19,15 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
+import { useThemeStore } from '@/stores/theme'
+
+const theme = useThemeStore()
+
+onMounted(() => {
+  theme.applyTheme()
+})
+
 import AppHeader from '@/components/layout/AppHeader.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
 </script>

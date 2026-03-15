@@ -23,8 +23,18 @@
 }
 
 .texto-apoyo {
+  display: none;
+  font-family: var(--font-secondary);
   color: var(--color-terracota);
 }
+
+@media(min-width: 720px) {
+  .texto-apoyo {
+    display: block;
+    font-size: 1rem;
+  }
+}
+
 </style>
 
 <template>

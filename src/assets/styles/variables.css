@@ -15,23 +15,7 @@
   --color-slate-dark: #2c3e50;
   /* Apoyo - Bordes y fondos secundarios */
 
-  /* --- Modo Claro --- */
-  --color-primary: var(--color-smoke);
-    /* Dominante (60%) - Fondos claros */
-  --color-secondary: var(--color-terracota);
-    /* Acento (10%) - Barras //, botones y hover */
-  --color-background: var(--color-smoke);
-    /* Fondo principal */
-  --color-background-secondary: var(--color-slate-light);
-    /* Fondo secundario para secciones o tarjetas */
-  --color-border: var(--color-slate-light);
-    /* Borde */
-  --color-border-hover: var(--color-slate-dark);
-    /* Borde en hover */
-  --color-text: var(--color-midnight);
-    /* Texto principal */
-  --color-heading: var(--color-midnight);
-    /* Color de los títulos */
+
 
 
   /* --- Tipografías --- */
@@ -55,5 +39,24 @@
   --cards-gap: 1.5rem;
 }
 
+[data-theme="light"]{
+  /* --- Modo Claro --- */
+  --color-primary: var(--color-smoke);
+    /* Dominante (60%) - Fondos claros */
+  --color-secondary: var(--color-terracota);
+    /* Acento (10%) - Barras //, botones y hover */
+  --color-background: var(--color-smoke);
+    /* Fondo principal */
+  --color-background-secondary: var(--color-slate-light);
+    /* Fondo secundario para secciones o tarjetas */
+  --color-border: var(--color-slate-light);
+    /* Borde */
+  --color-border-hover: var(--color-slate-dark);
+    /* Borde en hover */
+  --color-text: var(--color-midnight);
+    /* Texto principal */
+  --color-heading: var(--color-midnight);
+    /* Color de los títulos */
+}
 
 
