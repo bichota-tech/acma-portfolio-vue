@@ -40,12 +40,6 @@ import AppFooter from '@/components/layout/AppFooter.vue'
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  
-}
-
-main {
-  flex: 1;
-  padding: 1rem;
 }
 
 /* Transición simple para cambios de vistas */

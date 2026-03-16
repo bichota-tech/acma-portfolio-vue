@@ -1,9 +1,7 @@
 @import './variables.css';
 
-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: var(--section-gap);
+section{
+  padding: 3.5rem;
 }
 
 h1,

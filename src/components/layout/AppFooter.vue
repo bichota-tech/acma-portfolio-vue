@@ -11,7 +11,7 @@
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: var(--color-footer-bg);
+  background-color: var(--color-midnight);
   color: var(--color-footer-text);
 }
 footer p {

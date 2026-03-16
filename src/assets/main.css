@@ -17,7 +17,7 @@ body,
 
 body {
   color: var(--color-text);
-  background: var(--color-background);
+  background: transparent;
   font-family: var(--font-secondary);
   font-size: clamp(1rem, 1.5vw, 1.125rem);
 }
@@ -37,6 +37,7 @@ body {
 /* Asegurar que el contenido principal crezca y footer se quede abajo */
 main {
   flex: 1 0 auto;
+  
 }
 
 /* Footer al fondo */
