@@ -42,6 +42,11 @@ import AppFooter from '@/components/layout/AppFooter.vue'
   min-height: 100vh;
 }
 
+main {
+  flex: 1 0 auto;
+
+}
+
 /* Transición simple para cambios de vistas */
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.3s ease;

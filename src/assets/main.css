@@ -37,7 +37,9 @@ body {
 /* Asegurar que el contenido principal crezca y footer se quede abajo */
 main {
   flex: 1 0 auto;
-  
+  /* Hace que las vistas llenen el espacio disponible */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Footer al fondo */

@@ -4,6 +4,11 @@ section{
   padding: 3.5rem;
 }
 
+.view-section {
+  flex: 1;
+  /* Llenará el espacio que le deje el main */
+}
+
 h1,
 h2,
 h3 {
