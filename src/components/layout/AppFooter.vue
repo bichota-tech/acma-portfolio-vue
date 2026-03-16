@@ -14,4 +14,7 @@ footer {
   background-color: var(--color-footer-bg);
   color: var(--color-footer-text);
 }
+footer p {
+  margin: 0;
+}
 </style>

@@ -1,25 +1,45 @@
 
 @import './styles/reset.css';
 @import './styles/variables.css';
-@import './styles/base.css';
 @import './styles/theme-dark.css';
 @import './styles/utilities.css';
 
 
-/* Evitar que Vuetify rompa tu layout */
+/* Reset global para Vuetify + layout full viewport */
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  color: var(--color-text);
+  background: var(--color-background);
+  font-family: var(--font-secondary);
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+}
+
 .v-application {
   margin: 0 !important;
   padding: 0 !important;
+  min-height: 100%;
 }
 
 .v-application__wrap {
-  padding: 0 !important;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Asegúrate de que body también quede limpio */
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  font-family: var(--font-secondary);
+/* Asegurar que el contenido principal crezca y footer se quede abajo */
+main {
+  flex: 1 0 auto;
+}
+
+/* Footer al fondo */
+footer {
+  margin-top: auto;
 }
