@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; 2026 Mi Portfolio. Todos los derechos reservados.</p>
   </footer>
 </template>

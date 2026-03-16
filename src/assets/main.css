@@ -6,3 +6,7 @@
 @import './styles/layout.css';
 @import './styles/utilities.css';
 @import './styles/media-queries.css';
+
+body {
+  font-family: var(--font-secondary);
+}

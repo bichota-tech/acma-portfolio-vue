@@ -1,7 +1,7 @@
 <template>
-  <header>
+  <header role="banner">
+    <IdentityLogo/>
     <nav  role="navigation" aria-label="Navegación principal">
-      <IdentityLogo/>
       <ul>
         <li><router-link to="/">Inicio</router-link></li>
         <li><router-link to="/proyectos">Proyectos</router-link></li>
@@ -15,7 +15,7 @@
 
 <script setup>
 import IdentityLogo from '@/components/ui/IdentityLogo.vue'
-import ToggleDarkMode from '@/components/ui/ToggleDarkMode.vue'
+import ToggleDarkMode from '@/plugins/ToggleDarkMode.vue'
 </script>
 
 <style scoped>

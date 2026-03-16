@@ -1,14 +1,15 @@
 
 import { createApp } from 'vue'
 import App from './App.vue'
+import { vuetify } from './plugins/vuetify'
 import { createPinia } from 'pinia'
 import './assets/main.css'
 import router from './router'
 
 const app = createApp(App) // Crea la instancia de la aplicación Vue
 
+app.use(vuetify) // Configura Vuetify como el framework de UI para la aplicación
 app.use(createPinia()) // Configura Pinia como el sistema de gestión de estado para la aplicación
-
 app.use(router) // Configura Vue Router para manejar la navegación entre vistas en la aplicación
 
 // Monta la aplicación en el index con id 'app'
