@@ -3,10 +3,23 @@
 @import './styles/variables.css';
 @import './styles/base.css';
 @import './styles/theme-dark.css';
-@import './styles/layout.css';
 @import './styles/utilities.css';
-@import './styles/media-queries.css';
 
+
+/* Evitar que Vuetify rompa tu layout */
+.v-application {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.v-application__wrap {
+  padding: 0 !important;
+}
+
+/* Asegúrate de que body también quede limpio */
 body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
   font-family: var(--font-secondary);
 }
