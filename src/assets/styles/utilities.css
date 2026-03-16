@@ -13,6 +13,10 @@ h3 {
   /* Títulos compactos y "arquitectónicos" */
 }
 
+ul{
+  list-style: none;
+}
+
 p {
   margin-bottom: 1.5rem;
   line-height: 1.6;
