@@ -1,11 +1,23 @@
 
+/* 1. Imports externos (fuentes) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap');
+
+/* 2. Reset primero (base limpia) */
 @import './styles/reset.css';
+
+/* 3. Variables / tokens de diseño */
 @import './styles/variables.css';
+
+/* 4. Tema (dark/light) */
 @import './styles/theme-dark.css';
+
+/* 5. Tailwind */
+@import 'tailwindcss';
+
+/* 6. Utilities propias (override/control final) */
 @import './styles/utilities.css';
 
-
-/* Reset global para Vuetify + layout full viewport */
+/* Reset global + layout full viewport */
 html,
 body,
 #app {

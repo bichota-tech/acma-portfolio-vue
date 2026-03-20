@@ -1,5 +1,4 @@
-@import url('./variables.css');
-
+/* Tema Oscuro */
 [data-theme="dark"] {
     --color-primary: var(--color-midnight);
       /* Dominante (60%) - Fondos oscuros */
