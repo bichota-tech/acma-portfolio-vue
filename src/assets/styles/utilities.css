@@ -27,3 +27,31 @@ p {
   line-height: 1.6;
   /* Mejor legibilidad en párrafos */
 }
+
+.neon {
+  color: inherit;
+  font-weight: 800;
+  text-shadow:
+    0 0 5px var(--color-terracota-shine),
+    0 0 10px var(--color-terracota-shine);
+  animation: neon-flicker 4s ease-in-out infinite;
+}
+
+@keyframes neon-flicker {
+
+  0%,
+  100% {
+    opacity: 1;
+    text-shadow:
+      0 0 2px var(--color-terracota),
+      0 0 5px var(--color-terracota);
+  }
+
+  50% {
+    opacity: 1;
+    text-shadow:
+      0 0 10px var(--color-terracota-shine),
+      0 0 20px var(--color-terracota-shine),
+      0 0 30px var(--color-terracota);
+  }
+}

@@ -4,16 +4,20 @@
 /* Sistema de Diseño //ACMA */
 :root {
   /* --- Paleta de Colores --- */
+  /* Dominante (60%) - Fondos claros */
   --color-smoke: #F4F4F9;
-    /* Dominante (60%) - Fondos claros */
-  --color-midnight: #0A1128;
   /* Texto principal (30%) - Alta legibilidad */
-  --color-terracota: #f55139;
+  --color-midnight: #0A1128;
   /* Acento (10%) - Barras //, botones y hover */
-  --color-slate-light: #3D5A80;
+  --color-terracota: #f55139;
+  /* Sombra del acento */
+  --color-terracota-shadow: #f5513980;
+  /* Brillo del acento */
+  --color-terracota-shine: #fd0800;
   /* Apoyo - Bordes sutiles y texto secundario */
-  --color-slate-dark: #2c3e50;
+  --color-slate-light: #3D5A80;
   /* Apoyo - Bordes y fondos secundarios */
+  --color-slate-dark: #2c3e50;
 
 
 

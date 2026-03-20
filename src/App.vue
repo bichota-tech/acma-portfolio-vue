@@ -1,7 +1,5 @@
 <!-- src/App.vue -->
 <template>
-  <v-app>
-
     <!-- Header persistente -->
     <AppHeader />
 
@@ -17,7 +15,6 @@
     <!-- Footer persistente -->
     <AppFooter />
 
-  </v-app>
 </template>
 
 <script setup>
