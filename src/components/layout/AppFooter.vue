@@ -12,9 +12,9 @@ footer {
   text-align: center;
   padding: 1rem;
   background-color: var(--color-midnight);
-  color: var(--color-footer-text);
 }
 footer p {
   margin: 0;
+  color: var(--color-smoke);
 }
 </style>

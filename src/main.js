@@ -1,9 +1,9 @@
 
-import { createApp } from 'vue'
-import App from './App.vue'
-import { createPinia } from 'pinia'
-import './assets/main.css'
-import router from './router'
+import { createApp } from 'vue';
+import App from './App.vue';
+import { createPinia } from 'pinia';
+import './assets/main.css';
+import router from './router';
 
 const app = createApp(App) // Crea la instancia de la aplicación Vue
 

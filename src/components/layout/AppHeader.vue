@@ -1,29 +1,32 @@
 <template>
-  <header role="banner">
+  <header role="banner" class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 py-2">
     <IdentityLogo/>
-    <nav  role="navigation" aria-label="Navegación principal">
-      <ul>
-        <li><router-link to="/">Inicio</router-link></li>
-        <li><router-link to="/proyectos">Proyectos</router-link></li>
-        <li><router-link to="/habilidades">Habilidades</router-link></li>
-        <li><router-link to="/contacto">Contacto</router-link></li>
-      </ul>
-    </nav>
-    <ToggleDarkMode />
+
+    <div class="lg:block fixed right-10">
+      <ToggleDarkMode />
+    </div>
+
+    <NavigationMenu/>
   </header>
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router'
 import IdentityLogo from '@/components/ui/IdentityLogo.vue'
 import ToggleDarkMode from '@/plugins/ToggleDarkMode.vue'
+import NavigationMenu from '../ui/NavigationMenu.vue';
+
+const router = useRouter();
+
+router.push({ name: 'Home' });
+
+
 </script>
 
 <style scoped>
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem;
   background-color: var(--color-primary);
+  color: var(--color-text);
 }
 </style>
