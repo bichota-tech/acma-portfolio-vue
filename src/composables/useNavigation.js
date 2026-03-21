@@ -12,7 +12,7 @@ export function useNavigation() {
 
   // Responsive
   const handleResize = () => {
-    isDesktop.value = window.innerWidth >= 820
+    isDesktop.value = window.innerWidth >= 768 // breakpoint md de Tailwind
   }
 
   onMounted(() => {
@@ -26,7 +26,8 @@ export function useNavigation() {
 
   // Navegación
   const navigate = (item) => {
-    router.push({ name: item.route })
+    console.log('Navegando a:', item.route)
+    router.push({ name: item.route }).catch(err => console.log(err)) // Evitar error al hacer clic en la ruta actual
     tooltip.value = null
   }
 
@@ -41,7 +42,7 @@ export function useNavigation() {
       clearTimeout(tapTimeout)
       tapTimeout = setTimeout(() => {
         tooltip.value = null
-      }, 2000)
+      }, 3500)
     }
   }
 

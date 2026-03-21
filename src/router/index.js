@@ -8,11 +8,11 @@ import ContactView from '@/views/ContactView.vue'
 
 
 const routes = [
-  { path: '/', name: 'Home', component: HomeView },
-  { path: '/proyectos', name: 'Proyectos', component: ProjectsView },
-  { path: '/habilidades', name: 'Habilidades', component: SkillsView },
-  { path: '/sobre-mi', name: 'SobreMi', component: AboutView },
-  { path: '/contacto', name: 'Contacto', component: ContactView },
+  { path: '/', name: 'HomeView', component: HomeView },
+  { path: '/proyectos', name: 'ProjectsView', component: ProjectsView },
+  { path: '/habilidades', name: 'SkillsView', component: SkillsView },
+  { path: '/sobre-mi', name: 'AboutView', component: AboutView },
+  { path: '/contacto', name: 'ContactView', component: ContactView },
 ]
 
 const router = createRouter({

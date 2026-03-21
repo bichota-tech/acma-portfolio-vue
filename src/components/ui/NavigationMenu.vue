@@ -1,8 +1,8 @@
 <template>
-  <nav  role="navigation" aria-label="Navegación   principal">
+  <nav  role="navigation" aria-label="Navegación principal">
     <!-- Desktop: vertical derecha -->
     <ul
-    class="hidden lg:flex flex-col fixed right-10 top-1/2 -translate-y-1/2 space-y-6"
+    class="hidden md:flex flex-col items-center gap-6 fixed right-10 top-1/2 -translate-y-1/2 space-y-6"
     v-if="isDesktop"
     >
       <li v-for="item in menuItems" :key="item.name">
@@ -10,7 +10,7 @@
           @click="navigate(item)"
           @mouseenter="hovered = item.name"
           @mouseleave="hovered = null"
-          class="flex flex-col items-center gap-1"
+          class="flex flex-col items-center gap-2"
           id="desktop-button"
           >
           <!-- ICONO -->
@@ -75,16 +75,16 @@
   } = useNavigation()
 
   const menuItems = [
-    { name: 'Proyectos', label: 'Proyectos', icon: Rocket, route: 'ProjectsView' },
-    { name: 'Habilidades', label: 'Habilidades', icon: Code, route: 'SkillsView' },
-    { name: 'SobreMi', label: 'Sobre Mí', icon: Fingerprint, route: 'AboutView' },
-    { name: 'Contacto', label: 'Contacto', icon: CircleUser, route: 'ContactView' }
+    { name: 'projects', label: 'Proyectos', icon: Rocket, route: 'ProjectsView' },
+    { name: 'skills', label: 'Habilidades', icon: Code, route: 'SkillsView' },
+    { name: 'aboutme', label: 'Sobre Mí', icon: Fingerprint, route: 'AboutView' },
+    { name: 'contact', label: 'Contacto', icon: CircleUser, route: 'ContactView' }
   ]
 </script>
 
 <style scoped>
 /* Animaciones y estilos generales */
-#movile-icon, #desktop-button{
+#mobile-icon, #desktop-button{
   color: var(--color-text);
 }
 
