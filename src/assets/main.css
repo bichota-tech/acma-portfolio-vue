@@ -40,10 +40,4 @@ main {
   /* Hace que las vistas llenen el espacio disponible */
   display: flex;
   flex-direction: column;
-
-}
-
-/* Footer al fondo */
-footer {
-  margin-top: auto;
 }

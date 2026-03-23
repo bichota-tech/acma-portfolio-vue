@@ -28,5 +28,6 @@ header {
   padding: 1rem;
   background-color: var(--color-primary);
   color: var(--color-text);
+  z-index: 1000;
 }
 </style>

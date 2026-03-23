@@ -1,10 +1,8 @@
 <template>
-  <nav role="navigation" aria-label="Navegación principal"
-    class="flex justify-center items-center"
-  >
+  <nav role="navigation" aria-label="Navegación principal">
     <!-- Desktop: vertical derecha -->
     <ul id="desk"
-    class="hidden md:flex flex-col items-center p-8 gap-10 fixed right-8 top-1/2 -translate-y-1/2 space-y-6"
+    class="hidden md:flex flex-col items-center p-8 gap-10 fixed right-8 top-1/2 -translate-y-1/2 space-y-6 glassmorphic"
     v-if="isDesktop"
     >
       <li v-for="item in menuItems" :key="item.name">
@@ -34,7 +32,7 @@
 
       <!-- Mobile/Tablet: sticky bottom -->
     <ul id="mob"
-    class="lg:hidden flex justify-around items-center fixed bottom-25 left-0  w-90"
+    class="lg:hidden flex justify-around items-center fixed bottom-25 left-1/2 -translate-x-1/2 w-90 glassmorphic"
     v-if="!isDesktop"
     >
       <li v-for="item in menuItems" :key="item.name" class="relative">
@@ -55,7 +53,7 @@
         <!-- Tooltip -->
         <span
           v-if="tooltip === item.name"
-          class="absolute -top-10 left-1/2 -translate-x-1/2 text-md px-2 py-1 rounded"
+          class="absolute -top-15 left-1/2 -translate-x-1/2 text-md px-2 py-1 rounded"
           >
           {{ item.label }}
         </span>
@@ -86,27 +84,19 @@
 
 <style scoped>
 /* Animaciones y estilos generales */
-ul{
-
-  background: rgba(255, 255, 255, 0);
-  border-radius: 35px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(9.3px);
-  border: 1px solid rgba(255, 255, 255, 0.48);
-}
 
 ul#desk{
   padding: 2rem .8rem;
 }
 
 ul#mob{
-
   padding: 1rem .6rem;
 }
 
 #mobile-icon, #desktop-button{
   color: var(--color-text);
 }
+
 
 .icon-float {
   animation: float 1.5s ease-in-out infinite;

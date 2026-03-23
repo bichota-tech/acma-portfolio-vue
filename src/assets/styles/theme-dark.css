@@ -16,5 +16,7 @@
       /* Texto principal */
     --color-heading: var(--color-smoke);
       /* Color de los títulos */
+    --color-glass: var(--color-glass-dark);
+      /* Fondo para elementos glassmorphic */
 }
 
