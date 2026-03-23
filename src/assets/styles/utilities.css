@@ -1,7 +1,16 @@
 @import './variables.css';
 
 section{
-  padding: 3.5rem;
+  padding-top: 2rem;
+  padding-left: 3rem;
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  section{
+    padding: 1rem;
+    width: 100%;
+  }
 }
 
 .view-section {

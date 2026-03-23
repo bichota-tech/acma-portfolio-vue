@@ -30,7 +30,9 @@ body,
 body {
   font-family: var(--font-secondary);
   font-size: clamp(1rem, 1.5vw, 1.125rem);
+  background-color: var(--color-primary);
 }
+
 
 /* Asegurar que el contenido principal crezca y footer se quede abajo */
 main {
@@ -38,6 +40,7 @@ main {
   /* Hace que las vistas llenen el espacio disponible */
   display: flex;
   flex-direction: column;
+
 }
 
 /* Footer al fondo */

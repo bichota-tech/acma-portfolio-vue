@@ -60,6 +60,6 @@
 const router = useRouter()
 
 const goHome = () => {
-  router.push({ name: 'Home' })
+  router.push({ name: 'HomeView' })
 }
 </script>
