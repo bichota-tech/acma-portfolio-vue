@@ -1,31 +1,21 @@
 <template>
   <button
-    class="toggle-dark-mode"
+    class="toggle-dark-mode flex items-center justify-center"
     @click="toggleTheme"
-    aria-label="Alternar modo oscuro"
+    :aria-label="theme.isDark ? 'Activar modo claro' : 'Activar modo oscuro'"
   >
-    {{ theme.isDark ? '🌞' : '🌙' }}
+    <Sun v-if = "theme.isDark" class="w-8 h-8" />
+    <Moon v-else class="w-8 h-8" />
   </button>
 </template>
 
 <script setup>
+import { Sun, Moon } from 'lucide-vue-next'
 import { useThemeStore } from '@/stores/theme'
 const theme = useThemeStore()
 const toggleTheme = () => theme.toggleTheme()
 </script>
 
 <style scoped>
-.toggle-dark-mode {
-  background: none;
-  border-color: 2px solid var(--color-border);
-  border-radius: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  cursor: pointer;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-}
 
-.toggle-dark-mode:hover {
-  border-color: var(--color-border-hover);
-}
 </style>
