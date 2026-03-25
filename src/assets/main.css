@@ -31,6 +31,13 @@ body,
 body {
   font-family: var(--font-secondary);
   font-size: clamp(1rem, 1.5vw, 1.125rem);
+  z-index: 10;
+  position: relative;
+}
+
+#app{
+  position: relative;
+  z-index: 10;
 }
 
 

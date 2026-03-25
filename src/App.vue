@@ -1,5 +1,6 @@
 <!-- src/App.vue -->
 <template>
+  <ParticlesBackground />
     <!-- Header persistente -->
     <AppHeader />
 
@@ -18,6 +19,7 @@
 </template>
 
 <script setup>
+import ParticlesBackground from './components/ui/ParticlesBackground.vue';
 import { onMounted } from 'vue'
 import { useThemeStore } from '@/stores/theme'
 
@@ -29,6 +31,7 @@ onMounted(() => {
 
 import AppHeader from '@/components/layout/AppHeader.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
+
 </script>
 
 <style>
@@ -37,6 +40,7 @@ import AppFooter from '@/components/layout/AppFooter.vue'
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
+  position: relative;
 }
 
 main {
