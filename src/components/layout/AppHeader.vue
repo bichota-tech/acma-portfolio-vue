@@ -2,9 +2,7 @@
   <header role="banner" class="sticky top-0 left-0 w-full z-50 flex justify-between items-center px-4 py-2">
     <IdentityLogo/>
 
-    <div class="lg:block fixed right-10">
       <ToggleDarkMode />
-    </div>
 
     <NavigationMenu/>
   </header>

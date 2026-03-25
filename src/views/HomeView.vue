@@ -12,7 +12,7 @@
 .home {
   display: flex;
   flex-direction: column;
-  background-color: var(--color-primary);
+  background-color: transparent;
   color: var(--color-text);
 }
 </style>

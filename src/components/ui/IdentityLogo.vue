@@ -1,10 +1,6 @@
 <style scoped>
 /* Títulos compactos y "arquitectónicos" */
-.identity{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .brand{
   display: block;
   width: 50px;
@@ -12,6 +8,9 @@
 }
 
 @media (min-width: 400px) {
+  .identity{
+    margin: 0;
+  }
   .brand{
     width: 70px;
     height: 70px;
@@ -19,6 +18,9 @@
 }
 
 @media (min-width: 720px) {
+  .identity{
+    margin-left: 1rem;
+  }
   .brand{
     width: 80px;
     height: 80px;
@@ -38,7 +40,7 @@
 </style>
 
 <template>
-  <div class="identity">
+  <div class="identity flex items-center justify-center">
     <button class="brand" @click="goHome" aria-label="Ir a inicio">
 
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="logo-svg">
