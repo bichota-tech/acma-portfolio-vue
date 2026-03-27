@@ -11,7 +11,7 @@
           @mouseenter="hovered = item.name"
           @mouseleave="hovered = null"
           class="flex flex-col items-center gap-2"
-          id="desktop-button"
+          id="desktop-text"
           >
           <!-- ICONO -->
           <component
@@ -39,7 +39,7 @@
         <button
           @click="handleTap(item)"
           class="flex flex-col items-center"
-          id="mobile-icon"
+          id="mobile-text"
           >
           <component
             :is="item.icon"
@@ -53,7 +53,7 @@
         <!-- Tooltip -->
         <span
           v-if="tooltip === item.name"
-          class="absolute -top-15 left-1/2 -translate-x-1/2 text-md px-2 py-1 rounded"
+          class="absolute -top-15 left-1/2 -translate-x-1/2 text-md px-4 py-1 rounded"
           >
           {{ item.label }}
         </span>
@@ -71,7 +71,7 @@
     isDesktop,
     navigate,
     handleTap,
-    shouldFloat
+    shouldFloat,
   } = useNavigation()
 
   const menuItems = [
@@ -93,17 +93,19 @@ ul#mob{
   padding: 1rem .6rem;
 }
 
-#mobile-icon, #desktop-button{
+#mobile-text, #desktop-text{
   color: var(--color-text);
 }
-
 
 .icon-float {
   animation: float 1.5s ease-in-out infinite;
 }
 
+
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
+  0%, 100% {
+    transform: translateY(0);color: var(--color-terracota-shine);
+  }
   50% { transform: translateY(-4px); }
 }
 </style>

@@ -5,6 +5,8 @@
   display: block;
   width: 50px;
   height: 50px;
+  cursor: pointer;
+  margin: .8rem 1.5rem;
 }
 
 @media (min-width: 400px) {
