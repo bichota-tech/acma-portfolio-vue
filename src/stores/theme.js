@@ -2,13 +2,13 @@ import { defineStore } from 'pinia'
 
 export const useThemeStore = defineStore('theme', {
   state: () => ({
-    isLight: window.matchMedia('(prefers-color-scheme: light)').matches
+    isLight: window.matchMedia('(prefers-color-scheme: dark)').matches
   }),
 
   actions: {
 
     applyTheme() {
-      const theme = this.Light ? 'light' : 'dark'
+      const theme = this.isLight ? 'light' : 'dark'
       document.documentElement.setAttribute('data-theme', theme)
     },
 

@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import { Sun, Moon } from 'lucide-vue-next'
+import { Moon, Sun } from 'lucide-vue-next'
 import { useThemeStore } from '@/stores/theme'
 const theme = useThemeStore()
 const toggleTheme = () => theme.toggleTheme()
