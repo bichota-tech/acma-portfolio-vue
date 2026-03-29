@@ -9,9 +9,9 @@
   /* Fondo principal */
   --color-background-secondary: var(--color-slate-light);
   /* Fondo secundario para secciones o tarjetas */
-  --color-border: var(--color-slate-light);
+  --color-border: rgb(198, 196, 196);
   /* Borde */
-  --color-border-hover: var(--color-slate-dark);
+  --color-border-hover: var(--color-slate-light);
   /* Borde en hover */
   --color-text: var(--color-midnight);
   /* Texto principal */

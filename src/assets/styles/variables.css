@@ -16,9 +16,7 @@
   --color-slate-light: #3D5A80;
   /* Apoyo - Bordes y fondos secundarios */
   --color-slate-dark: #2c3e50;
-  --color-glass-dark:rgba(255, 255, 255, 0.125);
-  --color-glass-light: rgba(175, 172, 172, 0.119);
-
+  
   /* --- Tipografías --- */
   --font-primary: 'Space Grotesk', sans-serif;
   /* Para Titulares y Logo */
@@ -35,9 +33,6 @@
   --font-weight-bold: 700;
   /* Logo y Titulares H1/H2 */
 
-  /* --- Espaciado --- */
-  --section-gap: 3rem;
-  --cards-gap: 1.5rem;
 }
 
 [data-theme="dark"] {
@@ -49,16 +44,14 @@
   /* Fondo principal */
   --color-background-secondary: var(--color-slate-dark);
   /* Fondo secundario para secciones o tarjetas */
-  --color-border: var(--color-slate-dark);
+  --color-border: var(--color-slate-light);
   /* Borde */
-  --color-border-hover: var(--color-slate-light);
+  --color-border-hover: var(--color-slate-dark);
   /* Borde en hover */
   --color-text: var(--color-smoke);
   /* Texto principal */
   --color-heading: var(--color-smoke);
   /* Color de los títulos */
-  --color-glass: var(--color-glass-dark);
-  /* Fondo para elementos glassmorphic */
 }
 
 
