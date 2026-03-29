@@ -22,7 +22,3 @@ app.use(router) // Configura Vue Router para manejar la navegación entre vistas
 
 // Monta la aplicación en el index con id 'app'
 app.mount('#app')
-
-
-
-

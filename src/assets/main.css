@@ -9,7 +9,7 @@
 @import './styles/variables.css';
 
 /* 4. Tema (dark/light) */
-@import './styles/theme-dark.css';
+@import './styles/theme-light.css';
 
 /* 5. Tailwind */
 @import 'tailwindcss';
@@ -29,6 +29,7 @@ body {
 
 body {
   font-family: var(--font-secondary);
+  background-color: var(--color-primary);
   font-size: clamp(1rem, 1.5vw, 1.125rem);
   z-index: 1;
   position: relative;
