@@ -6,7 +6,11 @@
 
     <!-- Contenido dinámico de la vista -->
     <main class="h-screen overflow-y-auto scroll-smooth snap-y snap-mandatory">
-
+      <section
+        id="HomeView"
+        class="section-stack">
+        <HomeView />
+      </section>
       <section
         id="ProjectsView"
         class="section-stack">
@@ -46,6 +50,7 @@ onMounted(() => {
 })
 
 import AppHeader from '@/components/layout/AppHeader.vue'
+import HomeView from './views/HomeView.vue';
 import ProjectsView from './views/ProjectsView.vue';
 import SkillsView from './views/SkillsView.vue';
 import AboutView from './views/AboutView.vue';

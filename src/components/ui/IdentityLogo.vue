@@ -9,8 +9,7 @@
     <button
       class="flex items-baseline
       cursor-pointer
-      glassmorphic
-      transition-all duration-300 group"
+      glassmorphic"
       @click="goHome"
       aria-label="Ir a inicio"
     >
