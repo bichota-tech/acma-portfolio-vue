@@ -32,7 +32,7 @@
 
       <!-- Mobile/Tablet: sticky bottom -->
     <ul id="mob"
-    class="lg:hidden flex justify-around items-center fixed bottom-8 left-1/2 -translate-x-1/2 w-90 glassmorphic"
+    class="lg:hidden flex justify-around items-center flexWrap-nowrap fixed bottom-8 left-1/2 -translate-x-1/2 w-90 glassmorphic"
     v-if="!isDesktop"
     >
       <li v-for="item in menuItems" :key="item.name" class="relative">
@@ -53,7 +53,7 @@
         <!-- Tooltip -->
         <span
           v-if="tooltip === item.name"
-          class="absolute -top-15 left-1/2 -translate-x-1/2 text-md px-4 py-1 rounded"
+          class="absolute whitespace-nowrap -top-12 left-1/2 -translate-x-1/2 text-md px-4 py-1 rounded"
           >
           {{ item.label }}
         </span>
@@ -97,7 +97,7 @@
   }
 
   .text-xs, .text-md{
-    color: var(--color-text);
+    color: var(--color-terracota-shine);
   }
 
   .icon-float {
