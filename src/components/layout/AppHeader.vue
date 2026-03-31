@@ -1,7 +1,5 @@
 <template>
-  <header role="banner" class="sticky top-0 left-0 flex items-center justify-between items-center
-  px-6 py-2
-  w-full">
+  <header role="banner" class="sticky top-0 left-0 flex items-center justify-between items-center px-6 py-2 w-full">
     <IdentityLogo/>
 
     <ToggleLightMode />

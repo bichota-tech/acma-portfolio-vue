@@ -9,7 +9,7 @@
     <button
       class="flex items-baseline
       cursor-pointer
-      bg-[var(--color-midnight-trans)]
+      glassmorphic
       transition-all duration-300 group"
       @click="goHome"
       aria-label="Ir a inicio"
@@ -39,11 +39,6 @@
 <style scope>
   .identity button{
     padding: .5rem 1rem;
-    backdrop-filter: blur(4px) saturate(180%);
-    -webkit-backdrop-filter: blur(4px) saturate(180%);
-    border-radius: 30px;
-    border: 1px solid rgba(245, 82, 57, 0.308);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
   }
 </style>
 
