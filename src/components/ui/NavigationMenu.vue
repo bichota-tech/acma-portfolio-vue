@@ -51,13 +51,16 @@
         </button>
 
         <!-- Tooltip -->
-        <span
+        <transition name="fade" >
+
+          <span
           v-if="tooltip === item.name"
           class="absolute whitespace-nowrap -top-15 left-1/2 -translate-x-1/2 text-md px-4 py-1 rounded"
           >
           {{ item.label }}
         </span>
-      </li>
+      </transition>
+        </li>
     </ul>
   </nav>
 </template>
@@ -115,4 +118,26 @@
     }
     50% { transform: translateY(-4px); }
   }
+
+    /* Las clases de "active" controlan la duración y el tipo de curva (suavizado) */
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Estado inicial (cuando aparece) y estado final (cuando se va) */
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+    /* Mantenemos el -50% del centrado y bajamos 8px para el efecto de deslizamiento */
+    transform: translateY(8px);
+  }
+
+  /* Estado cuando ya está visible (opcional, para asegurar el centrado) */
+  .fade-enter-to,
+  .fade-leave-from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 </style>
