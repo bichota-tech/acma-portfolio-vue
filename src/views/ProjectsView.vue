@@ -1,5 +1,5 @@
 <template>
-  <section class="project view-section">
+  <section class="project view-section flex flex-col items-center justify-center">
     <h1>Proyectos</h1>
     <p>Aquí puedes ver algunos de mis proyectos destacados. Cada proyecto incluye una descripción, las tecnologías utilizadas y enlaces a repositorios o demostraciones en vivo.</p>
   </section>
@@ -10,9 +10,6 @@
 
 <style scoped>
 .project {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-primary);
   color: var(--color-text);
 }
 

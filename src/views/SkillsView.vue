@@ -1,5 +1,5 @@
 <template>
-  <section class="skills view-section">
+  <section class="skills view-section flex flex-col items-center justify-center">
     <h1>Habilidades</h1>
 
   </section>
@@ -9,9 +9,6 @@
 
 <style scoped>
 .skills {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-primary);
   color: var(--color-text);
 }
 </style>

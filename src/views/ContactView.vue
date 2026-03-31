@@ -1,5 +1,5 @@
 <template>
-  <section class="contact view-section">
+  <section class="contact view-section flex flex-col items-center justify-center">
     <h1>Contacto</h1>
     <p>Si deseas ponerte en contacto conmigo, puedes enviarme un correo electrónico </p>
   </section>
@@ -10,9 +10,6 @@
 
 <style scoped>
 .contact {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-primary);
   color: var(--color-text);
 }
 </style>

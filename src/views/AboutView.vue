@@ -1,5 +1,5 @@
 <template>
-  <section class="about view-section">
+  <section class="about view-section flex flex-col items-center justify-center">
     <h1>Sobre Mí</h1>
     <p>Me llamo [Nombre] y soy [Profesión]. Tengo [Edad] años y me encanta [Interés].</p>
   </section>
@@ -10,9 +10,6 @@
 
 <style scoped>
 .about {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-primary);
   color: var(--color-text);
 }
 </style>
