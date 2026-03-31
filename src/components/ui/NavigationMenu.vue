@@ -53,7 +53,7 @@
         <!-- Tooltip -->
         <span
           v-if="tooltip === item.name"
-          class="absolute whitespace-nowrap -top-12 left-1/2 -translate-x-1/2 text-md px-4 py-1 rounded"
+          class="absolute whitespace-nowrap -top-15 left-1/2 -translate-x-1/2 text-md px-4 py-1 rounded"
           >
           {{ item.label }}
         </span>
@@ -97,7 +97,11 @@
   }
 
   .text-xs, .text-md{
-    color: var(--color-terracota-shine);
+    color: var(--color-smoke);
+    padding: .2rem .5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    background-color: rgba(10, 17, 41);
+
   }
 
   .icon-float {
