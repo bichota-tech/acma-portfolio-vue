@@ -24,12 +24,10 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  background-color: transparent;
 }
 
 body {
   font-family: var(--font-secondary);
-  background-color: var(--color-primary);
   font-size: clamp(1rem, 1.5vw, 1.125rem);
   z-index: 1;
   position: relative;
@@ -37,7 +35,6 @@ body {
 
 #app{
   position: relative;
-
 }
 
 /* Asegurar que el contenido principal crezca y footer se quede abajo */

@@ -11,7 +11,7 @@
 <style scoped>
   header{
     padding: 1.5rem 3rem;
-    color: var(--color-text);
+    color: var(--color-smoke);
   }
 
   @media (max-width: 768px) {

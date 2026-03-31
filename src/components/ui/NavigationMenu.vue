@@ -11,7 +11,7 @@
           @mouseenter="hovered = item.name"
           @mouseleave="hovered = null"
           class="flex flex-col items-center gap-2"
-          id="desktop-text"
+          id="desktop-btn"
           >
           <!-- ICONO -->
           <component
@@ -32,14 +32,14 @@
 
       <!-- Mobile/Tablet: sticky bottom -->
     <ul id="mob"
-    class="lg:hidden flex justify-around items-center fixed bottom-25 left-1/2 -translate-x-1/2 w-90 glassmorphic"
+    class="lg:hidden flex justify-around items-center fixed bottom-15 left-1/2 -translate-x-1/2 w-90 glassmorphic"
     v-if="!isDesktop"
     >
       <li v-for="item in menuItems" :key="item.name" class="relative">
         <button
           @click="handleTap(item)"
           class="flex flex-col items-center"
-          id="mobile-text"
+          id="mobile-btn"
           >
           <component
             :is="item.icon"
@@ -92,7 +92,7 @@
     padding: 1rem .6rem;
   }
 
-  #mobile-text, #desktop-text{
+  .text-xs, .text-md{
     color: var(--color-text);
   }
 
