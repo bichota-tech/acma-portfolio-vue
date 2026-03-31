@@ -5,6 +5,7 @@ import Particles from '@tsparticles/vue3';
 import { loadSlim } from '@tsparticles/slim';
 import { createPinia } from 'pinia';
 import './assets/main.css';
+import '.assets/styles/utilities.css'
 import router from './router';
 
 const app = createApp(App) // Crea la instancia de la aplicación Vue

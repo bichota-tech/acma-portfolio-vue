@@ -7,7 +7,7 @@
   /* Texto principal (30%) - Alta legibilidad */
   --color-midnight: #0a1129;
   /* Acento (10%) - Barras //, botones y hover */
-  --color-midnight-trans: rgba(10, 17, 41, 0.664);
+  --color-midnight-trans: rgba(10, 17, 41, 0.6);
   --color-terracota: #f55139;
   /* Sombra del acento */
   --color-terracota-shadow: #f5513980;
