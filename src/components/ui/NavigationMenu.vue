@@ -83,6 +83,10 @@
 </script>
 
 <style scoped>
+  #desk, #mob{
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+  }
 
   ul#desk{
     padding: 2rem .8rem;

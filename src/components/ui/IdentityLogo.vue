@@ -38,6 +38,8 @@
 <style scope>
   .identity button{
     padding: .5rem 1rem;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 </style>
 

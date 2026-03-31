@@ -21,8 +21,10 @@ const toggleTheme = () => theme.toggleTheme()
 <style scoped>
 .toggle-light-mode {
   cursor: pointer;
-  color: var(--color-text);
+  color: var(--color-smoke);
   padding: .3rem;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 @media (min-width: 720px) {
   .toggle{
