@@ -20,7 +20,6 @@ const toggleTheme = () => theme.toggleTheme()
 
 <style scoped>
 .toggle-light-mode {
-  border-radius: 15px;
   cursor: pointer;
   color: var(--color-text);
   padding: .3rem;
