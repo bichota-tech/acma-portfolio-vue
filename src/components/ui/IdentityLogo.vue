@@ -1,69 +1,56 @@
-<style scoped>
-/* Títulos compactos y "arquitectónicos" */
-
-.brand{
-  display: block;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  margin: .8rem 1.5rem;
-}
-
-@media (min-width: 400px) {
-  .identity{
-    margin: 0;
-  }
-  .brand{
-    width: 70px;
-    height: 70px;
-  }
-}
-
-@media (min-width: 720px) {
-  .identity{
-    margin-left: 1rem;
-  }
-  .brand{
-    width: 80px;
-    height: 80px;
-  }
-}
-.logo-svg{
-  width: 100%;
-  height: 100%;
-}
-
-.logo-text{
-  font-family: var(--font-primary);
-  font-weight: 700;
-  font-size: 120px;
-}
-
-</style>
-
 <template>
-  <div class="identity flex items-center justify-center">
-    <button class="brand" @click="goHome" aria-label="Ir a inicio">
+  <div
+    class="identity
+    flex items-center justify-center
+    min-[400px]:m-0
+    min-[720px]:ml-4"
+    >
 
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="logo-svg">
-        <circle cx="256" cy="256" r="256" fill="#0A1128"/>
-        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central"
-         class="logo-text">
-          <tspan fill="#f55139" class="neon">//</tspan>
-          <tspan fill="#F4F4F9">ACMA</tspan>
-        </text>
-      </svg>
+    <button
+      class="flex items-baseline
+      cursor-pointer
+      bg-[var(--color-midnight-trans)]
+      transition-all duration-300 group"
+      @click="goHome"
+      aria-label="Ir a inicio"
+    >
+      <span
+      class="text-[var(--color-terracota)]
+      font-primary
+      font-bold
+      transition-colors duration-300
+      text-[clamp(1.6rem,3vw,1.7rem)]
+      neon">
+        //
+      </span>
 
+      <span
+      class=" text-[var(--color-smoke)]
+      font-primary
+      font-bold
+      text-[clamp(1.6rem,3vw,1.8rem)]">
+        ACMA
+      </span>
     </button>
+
   </div>
 </template>
 
-<script setup>
-  import { useRouter } from 'vue-router'
+<style scope>
+  .identity button{
+    padding: .5rem 1rem;
+    backdrop-filter: blur(4px) saturate(180%);
+    -webkit-backdrop-filter: blur(4px) saturate(180%);
+    border-radius: 30px;
+    border: 1px solid rgba(245, 82, 57, 0.308);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  }
+</style>
 
-const router = useRouter()
+<script setup>
 
 const goHome = () => {
-  router.push({ name: 'HomeView' })
+  const home = document.getElementById('HomeView');
+  home?.scrollIntoView({ behavior: 'smooth' });
 }
 </script>

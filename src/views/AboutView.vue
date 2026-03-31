@@ -9,7 +9,7 @@
 </script>
 
 <style scoped>
-.contact {
+.about {
   display: flex;
   flex-direction: column;
   background-color: var(--color-primary);

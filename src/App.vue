@@ -5,12 +5,28 @@
     <AppHeader />
 
     <!-- Contenido dinámico de la vista -->
-    <main>
-      <RouterView v-slot="{ Component }">
-        <Transition name="fade" mode="out-in">
-          <component :is="Component" />
-        </Transition>
-      </RouterView>
+    <main class="h-screen overflow-y-auto scroll-smooth snap-y snap-mandatory">
+
+      <section
+        id="ProjectsView"
+        class="section-stack">
+        <ProjectsView />
+      </section>
+      <section
+        id="SkillsView"
+        class="section-stack">
+        <SkillsView />
+      </section>
+      <section
+        id="AboutView"
+        class="section-stack">
+        <AboutView />
+      </section>
+      <section
+        id="ContactView"
+        class="section-stack">
+        <ContactView />
+      </section>
     </main>
 
     <!-- Footer persistente -->
@@ -30,17 +46,35 @@ onMounted(() => {
 })
 
 import AppHeader from '@/components/layout/AppHeader.vue'
+import ProjectsView from './views/ProjectsView.vue';
+import SkillsView from './views/SkillsView.vue';
+import AboutView from './views/AboutView.vue';
+import ContactView from './views/ContactView.vue';
 import AppFooter from '@/components/layout/AppFooter.vue'
 
 </script>
 
-<style>
+<style scoped>
 /* Layout global */
 #app {
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
   position: relative;
+}
+
+.section-stack {
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* El sticky top-0 hace que se queden "pegadas" mientras la siguiente sube */
 }
 
 main {

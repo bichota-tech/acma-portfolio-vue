@@ -83,29 +83,28 @@
 </script>
 
 <style scoped>
-/* Animaciones y estilos generales */
 
-ul#desk{
-  padding: 2rem .8rem;
-}
-
-ul#mob{
-  padding: 1rem .6rem;
-}
-
-#mobile-text, #desktop-text{
-  color: var(--color-text);
-}
-
-.icon-float {
-  animation: float 1.5s ease-in-out infinite;
-}
-
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);color: var(--color-terracota-shine);
+  ul#desk{
+    padding: 2rem .8rem;
   }
-  50% { transform: translateY(-4px); }
-}
+
+  ul#mob{
+    padding: 1rem .6rem;
+  }
+
+  #mobile-text, #desktop-text{
+    color: var(--color-text);
+  }
+
+  .icon-float {
+    animation: float 1.5s ease-in-out infinite;
+  }
+
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);color: var(--color-terracota-shine);
+    }
+    50% { transform: translateY(-4px); }
+  }
 </style>

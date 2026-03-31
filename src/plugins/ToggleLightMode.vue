@@ -1,12 +1,12 @@
 <template>
   <div class="toggle lg:block fixed right-5">
     <button
-      class="toggle-light-mode flex items-center justify-right"
+      class="toggle-light-mode flex items-center justify-center glassmorphic w-12 h-12 transition-all duration-300 group"
       @click="toggleTheme"
       :aria-label="theme.isLight ? 'Activar modo oscuro' : 'Activar modo claro'"
       >
-      <Moon v-if = "theme.isLight" class="w-8 h-8" />
-      <Sun v-else class="w-8 h-8" />
+      <Moon v-if = "theme.isLight" class="w-7 h-7" />
+      <Sun v-else class="w-7 h-7" />
     </button>
   </div>
 </template>
@@ -20,14 +20,14 @@ const toggleTheme = () => theme.toggleTheme()
 
 <style scoped>
 .toggle-light-mode {
-  background: none;
-  border: none;
+  border-radius: 15px;
   cursor: pointer;
   color: var(--color-text);
+  padding: .3rem;
 }
 @media (min-width: 720px) {
   .toggle{
-    right: 5%;
+    right: 4%;
   }
 }
 </style>
