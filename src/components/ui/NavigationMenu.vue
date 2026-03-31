@@ -32,7 +32,7 @@
 
       <!-- Mobile/Tablet: sticky bottom -->
     <ul id="mob"
-    class="lg:hidden flex justify-around items-center fixed bottom-15 left-1/2 -translate-x-1/2 w-90 glassmorphic"
+    class="lg:hidden flex justify-around items-center fixed bottom-8 left-1/2 -translate-x-1/2 w-90 glassmorphic"
     v-if="!isDesktop"
     >
       <li v-for="item in menuItems" :key="item.name" class="relative">
