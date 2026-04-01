@@ -99,7 +99,7 @@
     padding: 1rem .6rem;
   }
 
-  .text-xs, .text-md{
+  .text-md{
     color: var(--color-smoke);
     padding: .2rem .5rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
