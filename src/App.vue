@@ -6,31 +6,7 @@
 
     <!-- Contenido dinámico de la vista -->
     <main class="h-screen overflow-y-auto scroll-smooth snap-y snap-mandatory">
-      <section
-        id="HomeView"
-        class="section-stack">
-        <HomeView />
-      </section>
-      <section
-        id="ProjectsView"
-        class="section-stack">
-        <ProjectsView />
-      </section>
-      <section
-        id="SkillsView"
-        class="section-stack">
-        <SkillsView />
-      </section>
-      <section
-        id="AboutView"
-        class="section-stack">
-        <AboutView />
-      </section>
-      <section
-        id="ContactView"
-        class="section-stack">
-        <ContactView />
-      </section>
+      <RouterView v-slot="{ Component }"> <Transition name="fade" mode="out-in"> <component :is="Component" /> </Transition> </RouterView>
     </main>
 
     <!-- Footer persistente -->
@@ -50,11 +26,6 @@ onMounted(() => {
 })
 
 import AppHeader from '@/components/layout/AppHeader.vue'
-import HomeView from './views/HomeView.vue';
-import ProjectsView from './views/ProjectsView.vue';
-import SkillsView from './views/SkillsView.vue';
-import AboutView from './views/AboutView.vue';
-import ContactView from './views/ContactView.vue';
 import AppFooter from '@/components/layout/AppFooter.vue'
 
 </script>
