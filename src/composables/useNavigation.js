@@ -1,9 +1,10 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
+import { useRoute } from 'vue-router'
+import { useNavigationStore } from '@/stores/navigation'
 
 export function useNavigation() {
-  const router = useRouter()
   const route = useRoute()
+  const navStore = useNavigationStore()
 
   // Estado
   const hovered = ref(null)
@@ -12,7 +13,7 @@ export function useNavigation() {
 
   // Responsive
   const handleResize = () => {
-    isDesktop.value = window.innerWidth >= 768 // breakpoint md de Tailwind
+    isDesktop.value = window.innerWidth >= 768 // breakpoint md de tailwind.config.js
   }
 
   onMounted(() => {
@@ -26,8 +27,7 @@ export function useNavigation() {
 
   // Navegación
   const navigate = (item) => {
-    console.log('Navegando a:', item.route)
-    router.push({ name: item.route }).catch(err => console.log(err)) // Evitar error al hacer clic en la ruta actual
+    navStore.triggerNavigation(item.route)
     tooltip.value = null
   }
 

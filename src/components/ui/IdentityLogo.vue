@@ -1,52 +1,50 @@
 <template>
-  <div
-    class="identity
-    flex items-center justify-center
-    min-[400px]:m-0
-    min-[720px]:ml-4"
-    >
-
+  <div class="identity">
     <button
-      class="flex items-baseline
-      cursor-pointer
-      glassmorphic"
+      class="logo-btn glassmorphic flex items-baseline cursor-pointer"
       @click="goHome"
       aria-label="Ir a inicio"
     >
-      <span
-      class="text-[var(--color-terracota)]
-      font-primary
-      font-bold
-      transition-colors duration-300
-      text-[clamp(1.6rem,3vw,1.7rem)]
-      neon">
+      <span class="text-[var(--color-terracota)] font-primary font-bold neon text-[clamp(1.6rem,3vw,1.7rem)]">
         //
       </span>
-
-      <span
-      class=" text-[var(--color-smoke)]
-      font-primary
-      font-bold
-      text-[clamp(1.6rem,3vw,1.8rem)]">
+      <span class="text-[var(--color-smoke)] font-primary font-bold text-[clamp(1.6rem,3vw,1.8rem)]">
         ACMA
       </span>
     </button>
-
   </div>
 </template>
 
-<style scope>
-  .identity button{
-    padding: .5rem 1rem;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+<style scoped>
+.identity {
+  position: fixed;
+  top: 1.2rem;
+  left: 2rem;
+  z-index: 200;
+}
+
+.logo-btn {
+  padding: .5rem 1rem;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: opacity 0.2s ease;
+}
+
+
+@media (max-width: 768px) {
+  .identity {
+    top: 0.8rem;
+    left: 1rem;
   }
+}
 </style>
 
 <script setup>
+import { useNavigationStore } from '@/stores/navigation'
+
+const navStore = useNavigationStore()
 
 const goHome = () => {
-  const home = document.getElementById('HomeView');
-  home?.scrollIntoView({ behavior: 'smooth' });
+  navStore.triggerNavigation('HomeView')
 }
 </script>

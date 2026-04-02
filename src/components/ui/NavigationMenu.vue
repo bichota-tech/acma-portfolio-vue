@@ -32,7 +32,7 @@
 
       <!-- Mobile/Tablet: sticky bottom -->
     <ul id="mob"
-    class="lg:hidden flex justify-around items-center flexWrap-nowrap fixed bottom-8 left-1/2 -translate-x-1/2 w-90 glassmorphic"
+    class="lg:hidden flex justify-around items-center flexWrap-nowrap fixed bottom-12 left-1/2 -translate-x-1/2 w-90 glassmorphic"
     v-if="!isDesktop"
     >
       <li v-for="item in menuItems" :key="item.name" class="relative">
@@ -98,6 +98,11 @@
   ul#mob{
     padding: 1rem .6rem;
   }
+
+  #desktop-btn, #mobile-btn{
+    color: var(--color-smoke);
+  }
+
 
   .text-md{
     color: var(--color-smoke);

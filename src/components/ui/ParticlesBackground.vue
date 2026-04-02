@@ -2,6 +2,7 @@
     <vue-particles
       id="tsparticles"
       :options="particlesOptions"
+      @particles-loaded="onParticlesLoaded"
     />
 </template>
 
@@ -341,5 +342,38 @@
     motion: { disable: true, reduce: { factor: 4, value: true } }
 
   });
+
+  let particlesInstance = null;
+  const onParticlesLoaded = (container) => {
+    particlesInstance = container;
+  }
+
+  const triggerWarp = async () => {
+    if (!particlesInstance) return;
+
+    // Guardamos los valores originales desde actualOptions (la fuente de verdad de tsparticles)
+    const opts = particlesInstance.actualOptions;
+    const originalSpeed = opts.particles.move.speed;
+    const originalNumber = opts.particles.number.value;
+    const originalOpacityMax = opts.particles.opacity.value?.max ?? opts.particles.opacity.value ?? 0.5;
+
+    // --- FASE WARP: aceleración explosiva ---
+    opts.particles.move.speed = 35;
+    opts.particles.number.value = 220;
+    opts.particles.opacity.value = { min: 0.6, max: 1 };
+    await particlesInstance.refresh();
+
+    // --- RESTAURAR: volver al estado normal ---
+    setTimeout(async () => {
+      if (!particlesInstance) return;
+      const restoreOpts = particlesInstance.actualOptions;
+      restoreOpts.particles.move.speed = originalSpeed;
+      restoreOpts.particles.number.value = originalNumber;
+      restoreOpts.particles.opacity.value = { min: 0.1, max: originalOpacityMax };
+      await particlesInstance.refresh();
+    }, 900);
+  }
+
+  defineExpose({ triggerWarp });
 
 </script>

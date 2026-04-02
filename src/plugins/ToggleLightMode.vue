@@ -19,6 +19,13 @@ const toggleTheme = () => theme.toggleTheme()
 </script>
 
 <style scoped>
+.toggle {
+  position: fixed;
+  top: 1.2rem;
+  right: 2.3rem;
+  z-index: 200;
+}
+
 .toggle-light-mode {
   cursor: pointer;
   color: var(--color-smoke);
@@ -26,9 +33,11 @@ const toggleTheme = () => theme.toggleTheme()
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
-@media (min-width: 720px) {
-  .toggle{
-    right: 4%;
+
+@media (max-width: 768px) {
+  .toggle {
+    top: 0.8rem;
+    right: 2rem;
   }
 }
 </style>

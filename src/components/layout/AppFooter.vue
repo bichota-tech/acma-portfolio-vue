@@ -1,6 +1,6 @@
 <template>
   <footer role="contentinfo" class="flex justify-center">
-    <p>&copy; 2026 Mi Portfolio. Todos los derechos reservados.</p>
+    <p>&copy; 2026 //ACMA · CC BY-ND 4.0 ·</p>
   </footer>
 </template>
 
@@ -10,15 +10,10 @@
 <style scoped>
 footer {
   text-align: center;
-  padding: 1.5rem;
+  padding: .3rem;
   background-color: var(--color-midnight);
+}
 
-}
-@media (max-width: 768px) {
-  footer{
-    padding-bottom: 6rem;
-  }
-}
 footer p {
   margin: 0;
   color: var(--color-smoke);
