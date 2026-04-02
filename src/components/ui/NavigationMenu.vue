@@ -10,7 +10,7 @@
           @click="navigate(item)"
           @mouseenter="hovered = item.name"
           @mouseleave="hovered = null"
-          class="flex flex-col items-center gap-2"
+          class="flex flex-col items-center gap-2 cursor-pointer"
           id="desktop-btn"
           >
           <!-- ICONO -->
@@ -38,7 +38,7 @@
       <li v-for="item in menuItems" :key="item.name" class="relative">
         <button
           @click="handleTap(item)"
-          class="flex flex-col items-center"
+          class="flex flex-col items-center cursor-pointer"
           id="mobile-btn"
           >
           <component

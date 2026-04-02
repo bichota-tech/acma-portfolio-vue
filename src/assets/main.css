@@ -32,6 +32,13 @@ body {
   font-size: clamp(1rem, 1.5vw, 1.125rem);
   z-index: 1;
   position: relative;
+  cursor: default;
+}
+
+/* - Selección de texto transparente - */
+::selection {
+  background: transparent;
+  color: inherit;
 }
 
 #app {
