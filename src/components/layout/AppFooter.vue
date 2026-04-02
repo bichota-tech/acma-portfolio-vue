@@ -16,6 +16,7 @@ footer {
 
 footer p {
   margin: 0;
+  font-size: .8rem;
   color: var(--color-smoke);
 }
 </style>
