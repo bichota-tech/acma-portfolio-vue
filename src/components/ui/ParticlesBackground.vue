@@ -197,7 +197,7 @@
       },
       number: {
         density: { enable: true, width: 1920, height: 1080 },
-        limit: { mode: "delete", value: 0 },
+        limit: { mode: "delete", value: 150 },
         value: 80
       },
       opacity: {
