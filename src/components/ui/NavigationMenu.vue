@@ -100,16 +100,15 @@
   }
 
   #desktop-btn, #mobile-btn{
-    color: var(--color-smoke);
+    color: var(--text-primary);
   }
 
 
   .text-md{
-    color: var(--color-smoke);
+    color: var(--text-primary);
     padding: .2rem .5rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    background-color: rgba(10, 17, 41);
-
+    background-color: var(--bg-tertiary);
   }
 
   .icon-float {
@@ -119,7 +118,7 @@
 
   @keyframes float {
     0%, 100% {
-      transform: translateY(0);color: var(--color-terracota-shine);
+      transform: translateY(0);color: var(--accent);
     }
     50% { transform: translateY(-4px); }
   }

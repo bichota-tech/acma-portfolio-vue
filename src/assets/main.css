@@ -27,9 +27,8 @@ body {
 }
 
 body {
-  background-color: var(--color-primary);
+  background-color: var(--bg-primary);
   font-family: var(--font-secondary);
-  font-size: clamp(1rem, 1.5vw, 1.125rem);
   z-index: 1;
   position: relative;
   cursor: default;

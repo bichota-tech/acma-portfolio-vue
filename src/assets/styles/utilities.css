@@ -31,11 +31,11 @@ p {
 }
 
 .neon {
-  color: var(--color-terracota);
+  color: var(--accent);
   font-weight: bolder;
   text-shadow:
-    0 0 5px var(--color-terracota-shine),
-    0 0 10px var(--color-terracota-shine);
+    0 0 5px var(--color-fiery-terracotta-600),
+    0 0 10px var(--color-fiery-terracotta-600);
   animation: neon-flicker 4s ease-in-out infinite;
 }
 
@@ -45,26 +45,27 @@ p {
   100% {
     opacity: 1;
     text-shadow:
-      0 0 2px var(--color-terracota),
-      0 0 5px var(--color-terracota);
+      0 0 2px var(--accent),
+      0 0 5px var(--accent);
   }
 
   50% {
     opacity: 1;
     text-shadow:
-      0 0 10px var(--color-terracota-shine),
-      0 0 20px var(--color-terracota-shine),
-      0 0 30px var(--color-terracota);
+      0 0 10px var(--color-fiery-terracotta-600),
+      0 0 20px var(--color-fiery-terracotta-600),
+      0 0 30px var(--accent);
   }
 }
 
-.glassmorphic {
+
+/* .glassmorphic {
   border: 1px solid rgba(245, 82, 57, 0.308);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  background: rgba(10, 17, 41, 0.42);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.105);
+  background: rgba(10, 17, 41, 0.46);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
-}
+} */
 
 
 

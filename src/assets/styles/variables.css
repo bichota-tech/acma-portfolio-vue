@@ -2,21 +2,18 @@
 /* Sistema de Diseño //ACMA */
 :root {
   /* --- Paleta de Colores --- */
-  /* Dominante (60%) - Fondos claros */
-  --color-smoke: #F4F4F9;
-  /* Texto principal (30%) - Alta legibilidad */
-  --color-midnight: #0a1129;
-  /* Acento (10%) - Barras //, botones y hover */
-  --color-midnight-trans: rgba(10, 17, 41, 0.6);
-  --color-terracota: #f55139;
-  /* Sombra del acento */
-  --color-terracota-shadow: #f5513980;
-  /* Brillo del acento */
-  --color-terracota-shine: #fd0800;
-  /* Apoyo - Bordes sutiles y texto secundario */
-  --color-slate-light: #3D5A80;
-  /* Apoyo - Bordes y fondos secundarios */
-  --color-slate-dark: #2c3e50;
+  --color-fiery-terracotta-0  : #faeded;
+  --color-fiery-terracotta-50 : #feeae7;
+  --color-fiery-terracotta-100: #fcd5cf;
+  --color-fiery-terracotta-200: #faaa9e;
+  --color-fiery-terracotta-300: #f7806e;
+  --color-fiery-terracotta-400: #f5563d;
+  --color-fiery-terracotta-500: #f22b0d;
+  --color-fiery-terracotta-600: #c2230a;
+  --color-fiery-terracotta-700: #911a08;
+  --color-fiery-terracotta-800: #611105;
+  --color-fiery-terracotta-900: #300903;
+  --color-fiery-terracotta-950: #220602;
 
   /* --- Tipografías --- */
   --font-primary: 'Space Grotesk', sans-serif;
@@ -37,22 +34,28 @@
 }
 
 [data-theme="dark"] {
-  --color-primary: var(--color-midnight);
-  /* Dominante (60%) - Fondos oscuros */
-  --color-secondary: var(--color-terracota);
-  /* Acento (10%) - Barras //, botones y hover */
-  --color-background: var(--color-midnight);
-  /* Fondo principal */
-  --color-background-secondary: var(--color-slate-dark);
-  /* Fondo secundario para secciones o tarjetas */
-  --color-border: var(--color-slate-light);
-  /* Borde */
-  --color-border-hover: var(--color-slate-dark);
-  /* Borde en hover */
-  --color-text: var(--color-smoke);
-  /* Texto principal */
-  --color-heading: var(--color-smoke);
-  /* Color de los títulos */
+  --bg-primary: var(--color-fiery-terracotta-950);
+  --bg-secondary: var(--color-fiery-terracotta-900);
+  --bg-tertiary: var(--color-fiery-terracotta-800);
+
+  --surface: var(--color-fiery-terracotta-900);
+
+  --text-primary: var(--color-fiery-terracotta-50);
+  --text-secondary: var(--color-fiery-terracotta-200);
+
+  --accent: var(--color-fiery-terracotta-500);
+
 }
 
+[data-theme="dark"] .glassmorphic{
+  background: rgba(34, 6, 2, 0.6); /* terracotta-950 */
+
+  border: 1px solid rgba(245, 86, 61, 0.2); /* accent-400 */
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    transition: background 0.3s ease, border 0.3s ease;
+}
 

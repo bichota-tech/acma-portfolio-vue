@@ -28,7 +28,7 @@ const toggleTheme = () => theme.toggleTheme()
 
 .toggle-light-mode {
   cursor: pointer;
-  color: var(--color-smoke);
+  color: var(--text-primary);
   padding: .3rem;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;

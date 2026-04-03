@@ -9,6 +9,6 @@
 
 <style scoped>
 .skills {
-  color: var(--color-text);
+  color: var(--text-primary);
 }
 </style>

@@ -10,6 +10,6 @@
 
 <style scoped>
 .contact {
-  color: var(--color-text);
+  color: var(--text-primary);
 }
 </style>

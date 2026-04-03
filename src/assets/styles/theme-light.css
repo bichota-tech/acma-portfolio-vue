@@ -1,24 +1,27 @@
 /* Tema Claro */
 [data-theme="light"] {
-  /* --- Modo Claro --- */
-  --color-primary: var(--color-smoke);
-  /* Dominante (60%) - Fondos claros */
-  --color-secondary: var(--color-terracota);
-  /* Acento (10%) - Barras //, botones y hover */
-  --color-background: var(--color-smoke);
-  /* Fondo principal */
-  --color-background-secondary: var(--color-slate-light);
-  /* Fondo secundario para secciones o tarjetas */
-  --color-border: rgb(198, 196, 196);
-  /* Borde */
-  --color-border-hover: var(--color-slate-light);
-  /* Borde en hover */
-  --color-text: var(--color-midnight);
-  /* Texto principal */
-  --color-heading: var(--color-midnight);
-  /* Color de los títulos */
-  --color-glass: var(--color-glass-light);
-  /* Fondo para elementos glassmorphic */
+  --bg-primary: var(--color-fiery-terracotta-50);
+  --bg-secondary: var(--color-fiery-terracotta-100);
+  --bg-tertiary: var(--color-fiery-terracotta-200);
 
+  --surface: var(--color-fiery-terracotta-0);
+
+  --text-primary: var(--color-fiery-terracotta-900);
+  --text-secondary: var(--color-fiery-terracotta-700);
+
+  --accent: var(--color-fiery-terracotta-500);
+
+}
+
+[data-theme="light"] .glassmorphic{
+  background: rgba(250, 237, 237, 0.6); /* terracotta-0 con transparencia */
+
+  border: 1px solid rgba(242, 43, 13, 0.15); /* accent-500 suave */
+
+  box-shadow:
+    0 8px 24px rgba(242, 43, 13, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+
+    transition: background 0.3s ease, border 0.3s ease;
 }
 

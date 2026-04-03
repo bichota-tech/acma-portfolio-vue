@@ -10,6 +10,6 @@
 
 <style scoped>
 .home {
-  color: var(--color-text);
+  color: var(--text-primary);
 }
 </style>

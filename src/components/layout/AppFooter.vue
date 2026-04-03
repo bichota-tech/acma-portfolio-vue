@@ -11,12 +11,13 @@
 footer {
   text-align: center;
   padding: .3rem;
-  background-color: var(--color-midnight);
+  background-color: var(--color-fiery-terracotta-900);
+  border-top: 4px solid var(--color-fiery-terracotta-950);
 }
 
 footer p {
   margin: 0;
   font-size: .8rem;
-  color: var(--color-smoke);
+  color: var(--color-fiery-terracotta-50);
 }
 </style>

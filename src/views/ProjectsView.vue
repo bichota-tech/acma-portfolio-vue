@@ -10,7 +10,7 @@
 
 <style scoped>
 .project {
-  color: var(--color-text);
+  color: var(--text-primary);
 }
 
 </style>

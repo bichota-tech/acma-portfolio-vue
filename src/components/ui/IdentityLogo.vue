@@ -5,10 +5,10 @@
       @click="goHome"
       aria-label="Ir a inicio"
     >
-      <span class="text-[var(--color-terracota)] font-primary font-bold neon text-[clamp(1.6rem,3vw,1.7rem)]">
+      <span class="font-primary font-bold neon text-[clamp(1.6rem,3vw,1.7rem)]">
         //
       </span>
-      <span class="text-[var(--color-smoke)] font-primary font-bold text-[clamp(1.6rem,3vw,1.8rem)]">
+      <span class="text-[var(--text-primary)] font-primary font-bold text-[clamp(1.6rem,3vw,1.8rem)]">
         ACMA
       </span>
     </button>
