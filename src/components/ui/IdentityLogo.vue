@@ -1,7 +1,7 @@
 <template>
-  <div class="identity">
+  <div class="identity flex items-center justify-center">
     <button
-      class="logo-btn glassmorphic flex items-baseline cursor-pointer"
+      class="logo-btn flex items-baseline cursor-pointer"
       @click="goHome"
       aria-label="Ir a inicio"
     >
@@ -18,7 +18,7 @@
 <style scoped>
 .identity {
   position: fixed;
-  top: 1.2rem;
+  top: .5rem;
   left: 2rem;
   z-index: 200;
 }

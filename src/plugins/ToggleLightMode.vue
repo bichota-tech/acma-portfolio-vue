@@ -21,8 +21,8 @@ const toggleTheme = () => theme.toggleTheme()
 <style scoped>
 .toggle {
   position: fixed;
-  top: 1.2rem;
-  right: 2.3rem;
+  top: 1rem;
+  right: 2rem;
   z-index: 200;
 }
 
