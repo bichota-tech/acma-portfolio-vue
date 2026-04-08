@@ -89,6 +89,8 @@
   #desk, #mob{
     border-top-right-radius: 35px;
     border-bottom-left-radius: 35px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
 
   ul#desk{

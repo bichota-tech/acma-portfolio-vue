@@ -47,7 +47,7 @@ onUnmounted(() => {
 }
 
 .app-header.scrolled {
-  background-color: var(--bg-primary, var(--bg-primary, rgba(10, 17, 40, 0.9)));
+  background-color: var(--bg-secondary);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);

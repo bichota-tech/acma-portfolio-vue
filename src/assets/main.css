@@ -27,11 +27,19 @@ body {
 }
 
 body {
-  background-color: var(--bg-primary);
+  background: linear-gradient(120deg, var(--bg-primary), var(--bg-secondary), var(--bg-primary), var(--bg-secondary));
+  background-size: 300% 300%;
+  animation: breathingBackground 18s ease-in-out infinite;
   font-family: var(--font-secondary);
   z-index: 1;
   position: relative;
   cursor: default;
+}
+
+@keyframes breathingBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* - Selección de texto transparente - */

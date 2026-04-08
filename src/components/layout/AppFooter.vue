@@ -12,7 +12,7 @@ footer {
   text-align: center;
   padding: .3rem;
   background-color: var(--color-fiery-terracotta-900);
-  border-top: 4px solid var(--color-fiery-terracotta-950);
+  border-top: 1px solid var(--color-fiery-terracotta-950);
 }
 
 footer p {
