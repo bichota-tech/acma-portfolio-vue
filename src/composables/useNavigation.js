@@ -13,7 +13,7 @@ export function useNavigation() {
 
   // Responsive
   const handleResize = () => {
-    isDesktop.value = window.innerWidth >= 768 // breakpoint md de tailwind.config.js
+    isDesktop.value = window.innerWidth >= 1024 // breakpoint lg de tailwind.config.js
   }
 
   onMounted(() => {

@@ -1,15 +1,14 @@
 @import './variables.css';
 
 section{
-  padding-right: 8rem;
-  padding-left: 3rem;
-  padding-bottom: 3rem;
+  padding: 1.5rem;
 }
 
-@media (max-width: 760px) {
+@media (min-width: 768px) {
   section{
-    padding: 1.5rem;
-    padding-bottom: 5rem;
+    padding-right: 8rem;
+    padding-left: 3rem;
+
   }
 }
 
