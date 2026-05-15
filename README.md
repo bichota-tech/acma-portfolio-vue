@@ -44,18 +44,21 @@ Aplicación de portfolio personal desarrollada con Vue.js 3, diseñada para ser 
 
 - Node.js `^20.19.0` o `>=22.12.0`
 - npm (gestor de paquetes por defecto)
+- pnpm (gestor de paquetes recomendado)
 
 ## 💻 Instalación y Ejecución Local
 
 1. **Clona el repositorio e ingresa al directorio:**
    ```sh
    git clone <url-del-repositorio>
+   git clone https://github.com/tu-usuario/acma-portfolio-vue.git
    cd acma-portfolio-vue
    ```
 
 2. **Instala las dependencias necesarias:**
    ```sh
    npm install
+   pnpm install
    ```
 
 3. **Arranque del servidor en modo desarrollo (HMR continuo):**
@@ -74,6 +77,12 @@ Desde la terminal en el directorio raíz:
 - `npm run lint`: Ejecuta el análisis profundo del formato de los archivos.
 - `npm run format`: Arregla automáticamente tu código mediante las reglas de Prettier.
 - `npm run test:unit`: Evalúa funcionalidad de software mediante tests.
+- `pnpm dev`: Levanta un servidor de desarrollo ultrarrápido por Vite.
+- `pnpm build`: Acopla, minimiza y prepara tu software para producción, guardándolo en la carpeta `dist/`.
+- `pnpm preview`: Arranca un servidor temporal que sirve la carpeta `dist/`, ideado para probar el build final de manera local.
+- `pnpm lint`: Ejecuta el análisis profundo del formato de los archivos.
+- `pnpm format`: Arregla automáticamente tu código mediante las reglas de Prettier.
+- `pnpm test:unit`: Evalúa funcionalidad de software mediante tests.
 
 ## 🚀 Despliegue (Firebase)
 
@@ -82,6 +91,7 @@ El proyecto contiene la configuración base para publicarse en Firebase.
 1. Asegura tener el CLI de Firebase global:
    ```sh
    npm install -g firebase-tools
+   pnpm add -g firebase-tools
    ```
 2. Realiza sesión hacia tus proyectos:
    ```sh
@@ -90,5 +100,6 @@ El proyecto contiene la configuración base para publicarse en Firebase.
 3. Ensambla y publica:
    ```sh
    npm run build
+   pnpm build
    firebase deploy --only hosting
    ```
