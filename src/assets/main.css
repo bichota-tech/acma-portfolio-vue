@@ -59,6 +59,14 @@ body {
 main {
   flex: 1 0 auto;
   padding-block: 5rem;
+  margin-inline:1rem;
+}
+
+@media (min-width: 1024px) {
+  main {
+    margin-right: 7.5rem;
+    margin-inline:0;
+  }
 }
 
 

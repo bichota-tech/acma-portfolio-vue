@@ -1,8 +1,6 @@
 @import './variables.css';
 
-section{
-  padding: 1rem;
-}
+
 
 @media (min-width: 720px) {
   section{
@@ -12,11 +10,7 @@ section{
 }
 
 @media (min-width: 1020px) {
-  section{
-    padding-right: 8rem;
-    padding-left: 3rem;
 
-  }
 }
 
 h1,
