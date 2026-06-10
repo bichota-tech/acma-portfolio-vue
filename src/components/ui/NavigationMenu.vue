@@ -2,7 +2,7 @@
   <nav role="navigation" aria-label="Navegación principal">
     <!-- Desktop: vertical derecha -->
     <ul id="desk"
-    class="hidden md:flex flex-col items-center p-8 gap-10 fixed right-8 top-1/2 -translate-y-1/2 space-y-6 glassmorphic"
+    class="hidden md:flex flex-col items-center p-8 gap-8 fixed right-8 top-85 -translate-y-1/2 space-y-6 glassmorphic"
     v-if="isDesktop"
     >
       <li v-for="item in menuItems" :key="item.name">
@@ -17,22 +17,23 @@
           <component
             :is="item.icon"
             :class="[
-              'w-6 h-6 transition-all duration-300',
+              'w-7 h-7 transition-all duration-300',
               shouldFloat(item) ? 'icon-float' : ''
             ]"
           />
 
           <!-- TEXTO -->
-          <span class="text-xs">
+          <span class="text-[1rem]">
             {{ item.label }}
           </span>
         </button>
       </li>
+
     </ul>
 
       <!-- Mobile/Tablet: sticky bottom -->
     <ul id="mob"
-    class="lg:hidden flex justify-around items-center flexWrap-nowrap fixed bottom-12 left-1/2 -translate-x-1/2 w-90 glassmorphic"
+    class="lg:hidden flex justify-around items-center flexWrap-nowrap fixed bottom-2 left-1/2 -translate-x-1/2 w-90 glassmorphic"
     v-if="!isDesktop"
     >
       <li v-for="item in menuItems" :key="item.name" class="relative">
@@ -65,7 +66,7 @@
   </nav>
 </template>
 <script setup>
-  import { Rocket, Code, Fingerprint, CircleUser } from 'lucide-vue-next'
+  import { Rocket, Code, Fingerprint, CircleUser, FileText } from 'lucide-vue-next'
   import { useNavigation } from '@/composables/useNavigation'
 
   const {
@@ -81,14 +82,15 @@
     { name: 'projects', label: 'Proyectos', icon: Rocket, route: 'ProjectsView' },
     { name: 'skills', label: 'Habilidades', icon: Code, route: 'SkillsView' },
     { name: 'aboutme', label: 'Sobre Mí', icon: Fingerprint, route: 'AboutView' },
-    { name: 'contact', label: 'Contacto', icon: CircleUser, route: 'ContactView' }
+    { name: 'contact', label: 'Contacto', icon: CircleUser, route: 'ContactView' },
+    { name: 'resume', label: 'Currículum', icon: FileText, download:'/assets/docs/FrontendDev-Vue-Adalid.pdf' }
+
   ]
 </script>
 
 <style scoped>
   #desk, #mob{
-    border-top-right-radius: 35px;
-    border-bottom-left-radius: 35px;
+    border-radius: 20px;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
   }
