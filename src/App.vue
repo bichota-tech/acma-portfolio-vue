@@ -15,7 +15,7 @@
 
   </main>
   <!-- Footer persistente -->
-  <AppFooter />
+  <!-- <AppFooter /> -->
 </template>
 
 <script setup>
@@ -26,7 +26,7 @@ import { useRouter } from 'vue-router'
 import { useNavigationStore } from '@/stores/navigation'
 
 import AppHeader from '@/components/layout/AppHeader.vue'
-import AppFooter from '@/components/layout/AppFooter.vue'
+/* import AppFooter from '@/components/layout/AppFooter.vue' */
 
 const theme = useThemeStore()
 const particlesRef = ref(null)

@@ -2,7 +2,7 @@
   <nav role="navigation" aria-label="Navegación principal">
     <!-- Desktop: vertical derecha -->
     <ul id="desk"
-    class="hidden md:flex flex-col items-center p-8 gap-8 fixed right-8 top-85 -translate-y-1/2 space-y-6 glassmorphic"
+    class="hidden md:flex flex-col items-center p-8 gap-8 fixed right-8 top-1/2 -translate-y-1/2 space-y-6 glassmorphic"
     v-if="isDesktop"
     >
       <li v-for="item in menuItems" :key="item.name">
@@ -23,7 +23,7 @@
           />
 
           <!-- TEXTO -->
-          <span class="text-[1rem]">
+          <span class="text-label">
             {{ item.label }}
           </span>
         </button>
@@ -45,9 +45,10 @@
           <component
             :is="item.icon"
             :class="[
-              'w-6 h-6 transition-all',
+              'w-6 h-6 transition-all mobileIcon',
               shouldFloat(item) ? 'icon-float' : ''
             ]"
+
           />
         </button>
 
@@ -56,7 +57,7 @@
 
           <span
           v-if="tooltip === item.name"
-          class="absolute whitespace-nowrap -top-15 left-1/2 -translate-x-1/2 text-md px-4 py-1 rounded"
+          class="text-label absolute whitespace-nowrap -top-15 left-1/2 -translate-x-1/2 text-md px-4 py-1 rounded"
           >
           {{ item.label }}
         </span>
@@ -103,10 +104,31 @@
     padding: 1rem .6rem;
   }
 
+  .text-label {
+    font-size: clamp(1rem, 4vw, 1.25rem);
+  }
+
+  @media (min-width: 720px) {
+    ul#mob{
+      width: 80%;
+      padding: 1.5rem .8rem;
+      bottom:2%;
+    }
+
+    .mobileIcon{
+      min-width: 38px;
+      min-height: 38px;
+    }
+
+    .text-md{
+      top: -6rem;
+    }
+
+  }
+
   #desktop-btn, #mobile-btn{
     color: var(--text-primary);
   }
-
 
   .text-md{
     color: var(--text-primary);
