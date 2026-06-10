@@ -104,15 +104,15 @@
     padding: 1rem .6rem;
   }
 
-  .text-label {
-    font-size: clamp(1rem, 4vw, 1.25rem);
-  }
-
   @media (min-width: 720px) {
     ul#mob{
       width: 80%;
       padding: 1.5rem .8rem;
       bottom:2%;
+    }
+
+    .text-label {
+      font-size: clamp(.9rem, 2vw, 1rem);
     }
 
     .mobileIcon{
@@ -121,7 +121,7 @@
     }
 
     .text-md{
-      top: -6rem;
+      top: -5rem;
     }
 
   }
