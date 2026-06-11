@@ -1,8 +1,8 @@
 <template>
-  <div class="bodycardfame min-h-[600px] flex flex-col justify-center items-center w-full relative select-none">
+  <div class="bodycardfame flex flex-col justify-center items-center w-full relative select-none">
 
     <!-- Carousel Wrapper -->
-    <div class="carousel-wrapperfame w-full h-[480px] md:h-[520px] lg:h-[580px] overflow-hidden relative" style="perspective: 2000px;">
+    <div class="carousel-wrapperfame w-full overflow-hidden relative" style="perspective: 2000px;">
       <div
         ref="carouselRef"
         class="carouselfame relative h-full w-full flex justify-center items-center"
@@ -16,7 +16,7 @@
         <div
           v-for="(project, index) in projects"
           :key="project.key"
-          class="cardfame absolute w-[280px] sm:w-[320px] md:w-[360px] h-[400px] md:h-[450px] lg:h-[500px] border-radius-[35px] overflow-hidden transition-all duration-800 ease-in-out"
+          class="cardfame absolute overflow-hidden transition-all duration-800 ease-in-out"
           :class="getCardClass(index)"
           @click="handleCardClick($event, index)"
         >
@@ -172,10 +172,13 @@ const {
 
 .carousel-wrapperfame {
   width: 100%;
+  height: 80vh;
+  min-height: 320px;
+  max-height: 480px;
   overflow: hidden;
   position: relative;
   perspective: 2000px;
-  padding-block: 1rem;
+  padding-block: 0.5rem;
 }
 
 .carouselfame {
@@ -191,8 +194,9 @@ const {
 .cardfame {
   position: absolute;
   padding: 0;
-  height: 100%;
-  border-radius: 35px;
+  height: 90%;
+  aspect-ratio: 9/13;
+  border-radius: 24px;
   overflow: hidden;
   transition: transform 0.8s ease, opacity 0.6s ease, filter 0.6s ease;
   filter: blur(2px);
@@ -201,12 +205,14 @@ const {
 }
 
 @media (max-width: 800px) {
+  
+
   .carousel-wrapperfame {
-    height: 70vh;
+    height: 55vh;
+    min-height: 280px;
   }
   .cardfame {
-    height: 450px;
-    border-radius: 30px;
+    border-radius: 20px;
   }
 }
 
@@ -215,7 +221,8 @@ const {
     margin-top: 0;
   }
   .carousel-wrapperfame {
-    height: 70vh;
+    height: 65vh;
+    min-height: 250px;
   }
 }
 
@@ -234,38 +241,51 @@ const {
 }
 
 .cardfame.leftfame {
-  transform: translateX(-350px) translateZ(-150px) rotateY(35deg) scale(0.85);
+  transform: translateX(-280px) translateZ(-120px) rotateY(30deg) scale(0.85);
   opacity: 1;
   z-index: 3;
 }
 
 .cardfame.rightfame {
-  transform: translateX(350px) translateZ(-150px) rotateY(-35deg) scale(0.85);
+  transform: translateX(280px) translateZ(-120px) rotateY(-30deg) scale(0.85);
   opacity: 1;
   z-index: 3;
 }
 
 @media (max-width: 1024px) {
   .cardfame.leftfame {
-    transform: translateX(-280px) translateZ(-150px) rotateY(35deg) scale(0.85);
+    transform: translateX(-220px) translateZ(-100px) rotateY(30deg) scale(0.85);
     opacity: 1;
     z-index: 3;
   }
   .cardfame.rightfame {
-    transform: translateX(280px) translateZ(-150px) rotateY(-35deg) scale(0.85);
+    transform: translateX(220px) translateZ(-100px) rotateY(-30deg) scale(0.85);
     opacity: 1;
     z-index: 3;
   }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 640px) {
   .cardfame.leftfame {
-    transform: translateX(-200px) translateZ(-150px) rotateY(35deg) scale(0.85);
+    transform: translateX(-150px) translateZ(-80px) rotateY(25deg) scale(0.85);
     opacity: 1;
     z-index: 3;
   }
   .cardfame.rightfame {
-    transform: translateX(200px) translateZ(-150px) rotateY(-35deg) scale(0.85);
+    transform: translateX(150px) translateZ(-80px) rotateY(-25deg) scale(0.85);
+    opacity: 1;
+    z-index: 3;
+  }
+}
+
+@media (max-width: 400px) {
+  .cardfame.leftfame {
+    transform: translateX(-120px) translateZ(-60px) rotateY(20deg) scale(0.85);
+    opacity: 1;
+    z-index: 3;
+  }
+  .cardfame.rightfame {
+    transform: translateX(120px) translateZ(-60px) rotateY(-20deg) scale(0.85);
     opacity: 1;
     z-index: 3;
   }
