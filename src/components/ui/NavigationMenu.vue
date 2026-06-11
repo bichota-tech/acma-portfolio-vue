@@ -1,5 +1,5 @@
 <template>
-  <nav role="navigation" aria-label="Navegación principal">
+  <nav role="navigation" aria-label="Navegación principal" class="z-1000">
     <!-- Desktop: vertical derecha -->
     <ul id="desk"
     class="hidden md:flex flex-col items-center p-8 gap-8 fixed right-8 top-1/2 -translate-y-1/2 space-y-6 glassmorphic"
