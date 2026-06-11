@@ -1,187 +1,234 @@
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick } from 'vue';
 
-/**
- * Composable para gestionar la lógica del carrusel 3D
- * Reutilizable en cualquier componente Vue
- */
-export function useCarousel(itemsRef, options = {}) {
-  // Configuración
-  const autoplayDuration = options.autoplayDuration ?? 8000
-  const pauseOnHoverDelay = options.pauseOnHoverDelay ?? 2000
-  const swipeThreshold = options.swipeThreshold ?? 50
-  const _transitionDuration = options.transitionDuration ?? 800
+export function useCarousel(projectsRef, options = {}) {
+  // Option defaults/refs
+  const autoplay = options.autoplay ?? ref(true);
+  const autoplayInterval = options.autoplayInterval ?? ref(8000);
 
-  // Estado del carrusel
-  const currentIndex = ref(0)
-  const isPaused = ref(false)
-  const isTransitioning = ref(false)
+  const currentIndex = ref(0);
+  const isTransitioning = ref(false);
+  const isPaused = ref(false);
+  const isModalOpen = ref(false);
+  const isClosing = ref(false);
+  const selectedProject = ref(null);
 
-  // Timers
-  let autoplayTimer = null
-  let hoverTimer = null
+  const touchStartX = ref(0);
+  const closeBtnRef = ref(null);
 
-  // Estado del swipe
-  let touchStartX = 0
+  let autoplayTimer = null;
+  let hoverResumeTimer = null;
 
-  // Computed
-  const totalItems = computed(() => itemsRef.value?.length ?? 0)
+  // Determine classes for 3D layout based on index relative to active card
+  const getCardClass = (index) => {
+    const total = projectsRef.value?.length ?? 0;
+    if (total === 0) return 'hiddenfame';
 
-  const activeIndex = computed(() => currentIndex.value)
+    const activeIdx = currentIndex.value;
+    const leftIdx = (activeIdx - 1 + total) % total;
+    const rightIdx = (activeIdx + 1) % total;
 
-  const leftIndex = computed(() =>
-    (currentIndex.value - 1 + totalItems.value) % totalItems.value
-  )
+    if (index === activeIdx) return 'activefame';
+    if (index === leftIdx) return 'leftfame';
+    if (index === rightIdx) return 'rightfame';
+    return 'hiddenfame';
+  };
 
-  const rightIndex = computed(() =>
-    (currentIndex.value + 1) % totalItems.value
-  )
-
-  // Método: obtener clase de estado de una card
-  const getCardClass = (itemIndex) => {
-    if (itemIndex === activeIndex.value) return 'active'
-    if (itemIndex === leftIndex.value) return 'left'
-    if (itemIndex === rightIndex.value) return 'right'
-    return 'hidden'
-  }
-
-  // Método: actualizar índice actual
-  const updateCarousel = (index) => {
-    currentIndex.value =
-      (index % totalItems.value + totalItems.value) % totalItems.value
-    isTransitioning.value = false
-  }
-
-  // Método: ir a una card específica
+  // Navigation
   const goToCard = (index) => {
-    if (isTransitioning.value) return
-    isTransitioning.value = true
-    updateCarousel(index)
-    restartAutoplay()
-  }
+    if (isTransitioning.value) return;
 
-  // Método: siguiente card
+    isTransitioning.value = true;
+    const total = projectsRef.value?.length ?? 0;
+    if (total === 0) return;
+    currentIndex.value = (index % total + total) % total;
+
+    // Clear transition lock after standard 800ms animation duration
+    setTimeout(() => {
+      isTransitioning.value = false;
+    }, 800);
+
+    restartAutoplay();
+  };
+
   const nextCard = () => {
-    goToCard(currentIndex.value + 1)
-  }
+    goToCard(currentIndex.value + 1);
+  };
 
-  // Método: card anterior
   const prevCard = () => {
-    goToCard(currentIndex.value - 1)
-  }
+    goToCard(currentIndex.value - 1);
+  };
 
-  // Autoplay
+  // Autoplay triggers
   const startAutoplay = () => {
-    if (autoplayTimer) clearInterval(autoplayTimer)
-
+    if (!autoplay.value) return;
+    stopAutoplay();
     autoplayTimer = setInterval(() => {
-      if (!isPaused.value) {
-        nextCard()
+      if (!isPaused.value && !isModalOpen.value) {
+        nextCard();
       }
-    }, autoplayDuration)
-  }
-
-  const restartAutoplay = () => {
-    startAutoplay()
-  }
+    }, autoplayInterval.value);
+  };
 
   const stopAutoplay = () => {
     if (autoplayTimer) {
-      clearInterval(autoplayTimer)
-      autoplayTimer = null
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
     }
-  }
+  };
 
-  // Event Handlers
-  const handleKeyboardEvent = (e) => {
-    if (isTransitioning.value) return
+  const restartAutoplay = () => {
+    startAutoplay();
+  };
 
-    switch (e.key) {
-      case 'ArrowRight':
-        e.preventDefault()
-        nextCard()
-        break
-      case 'ArrowLeft':
-        e.preventDefault()
-        prevCard()
-        break
-      case 'Enter':
-        // El componente manejará esto
-        break
-    }
-  }
-
-  const handleTouchStart = (e) => {
-    touchStartX = e.touches[0].clientX
-  }
-
-  const handleTouchEnd = (e) => {
-    if (isTransitioning.value) return
-
-    const touchEndX = e.changedTouches[0].clientX
-    const difference = touchStartX - touchEndX
-
-    if (Math.abs(difference) > swipeThreshold) {
-      if (difference > 0) {
-        nextCard()
-      } else {
-        prevCard()
-      }
-    }
-  }
-
+  // Hover controls
   const handleMouseEnter = () => {
-    isPaused.value = true
-  }
+    if (hoverResumeTimer) clearTimeout(hoverResumeTimer);
+    isPaused.value = true;
+  };
 
   const handleMouseLeave = () => {
-    if (hoverTimer) clearTimeout(hoverTimer)
+    // Resume autoplay 2 seconds after cursor leaves, matching vanilla implementation
+    hoverResumeTimer = setTimeout(() => {
+      isPaused.value = false;
+    }, 2000);
+  };
 
-    hoverTimer = setTimeout(() => {
-      isPaused.value = false
-    }, pauseOnHoverDelay)
-  }
+  // Card click (only active card opens modal, others slide in)
+  const handleCardClick = (event, index) => {
+    if (index !== currentIndex.value) {
+      event.preventDefault();
+      goToCard(index);
+      return;
+    }
+
+    const project = projectsRef.value?.[index];
+    if (project) {
+      openModal(project);
+    }
+  };
+
+  // Modal actions
+  const openModal = (project) => {
+    selectedProject.value = project;
+    isModalOpen.value = true;
+    isPaused.value = true;
+    stopAutoplay();
+    
+    // Disable body scroll when modal is open
+    document.body.style.overflow = 'hidden';
+
+    // Manage accessibility focus
+    nextTick(() => {
+      if (closeBtnRef.value) {
+        closeBtnRef.value.focus();
+      }
+    });
+  };
+
+  const closeModal = () => {
+    if (isClosing.value) return;
+    isClosing.value = true;
+
+    // Match the 300ms transition of the slide-out animation
+    setTimeout(() => {
+      isModalOpen.value = false;
+      isClosing.value = false;
+      selectedProject.value = null;
+      document.body.style.overflow = '';
+
+      // Resume autoplay after 2 seconds
+      setTimeout(() => {
+        isPaused.value = false;
+        startAutoplay();
+      }, 2000);
+    }, 300);
+  };
+
+  // Touch Gestures (Swipe)
+  const handleTouchStart = (event) => {
+    touchStartX.value = event.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (event) => {
+    if (isTransitioning.value) return;
+
+    const touchEndX = event.changedTouches[0].clientX;
+    const diff = touchStartX.value - touchEndX;
+    const threshold = 50; // swipe threshold in pixels
+
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0) {
+        nextCard();
+      } else {
+        prevCard();
+      }
+    }
+  };
+
+  // Keyboard handler
+  const handleKeyDown = (event) => {
+    if (isTransitioning.value) return;
+
+    if (isModalOpen.value) {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        closeModal();
+      }
+    } else {
+      switch (event.key) {
+        case 'ArrowRight':
+          event.preventDefault();
+          nextCard();
+          break;
+        case 'ArrowLeft':
+          event.preventDefault();
+          prevCard();
+          break;
+        case 'Enter': {
+          // If focusing active card, open modal
+          event.preventDefault();
+          const activeProj = projectsRef.value?.[currentIndex.value];
+          if (activeProj) {
+            openModal(activeProj);
+          }
+          break;
+        }
+      }
+    }
+  };
 
   // Lifecycle
   onMounted(() => {
-    // Agregar event listeners globales
-    document.addEventListener('keydown', handleKeyboardEvent)
-
-    // Iniciar autoplay
-    startAutoplay()
-  })
+    startAutoplay();
+    window.addEventListener('keydown', handleKeyDown);
+  });
 
   onUnmounted(() => {
-    // Limpiar timers y listeners
-    stopAutoplay()
-    if (hoverTimer) clearTimeout(hoverTimer)
-    document.removeEventListener('keydown', handleKeyboardEvent)
-  })
+    stopAutoplay();
+    if (hoverResumeTimer) clearTimeout(hoverResumeTimer);
+    window.removeEventListener('keydown', handleKeyDown);
+    document.body.style.overflow = '';
+  });
 
   return {
-    // State
     currentIndex,
-    isPaused,
     isTransitioning,
-
-    // Computed
-    totalItems,
-    activeIndex,
-    leftIndex,
-    rightIndex,
-
-    // Methods
+    isPaused,
+    isModalOpen,
+    isClosing,
+    selectedProject,
+    closeBtnRef,
+    
     getCardClass,
     goToCard,
     nextCard,
     prevCard,
-    startAutoplay,
-    stopAutoplay,
-    updateCarousel,
-
-    // Handlers
-    handleTouchStart,
-    handleTouchEnd,
     handleMouseEnter,
-    handleMouseLeave
-  }
+    handleMouseLeave,
+    handleCardClick,
+    openModal,
+    closeModal,
+    handleTouchStart,
+    handleTouchEnd
+  };
 }

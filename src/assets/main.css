@@ -26,6 +26,13 @@ body {
   min-height: 100dvh;
 }
 
+@theme {
+  --color-accent-primary: var(--accent);
+  --color-accent-primary-bright: var(--color-fiery-terracotta-600);
+  --color-accent-secondary: var(--accent);
+  --color-accent-dark: var(--color-fiery-terracotta-800);
+}
+
 body {
   background: linear-gradient(120deg, var(--bg-primary), var(--bg-secondary), var(--bg-primary), var(--bg-secondary));
   background-size: 300% 300%;
