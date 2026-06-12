@@ -6,7 +6,8 @@ h3 {
   font-family: var(--font-primary);
   font-weight: var(--font-weight-bold);
   line-height: 1.2;
-  /* Títulos compactos y "arquitectónicos" */
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
 }
 
 ul{
@@ -14,9 +15,10 @@ ul{
 }
 
 p {
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  /* Mejor legibilidad en párrafos */
+  font-family: var(--font-secondary);
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
 }
 
 .neon {

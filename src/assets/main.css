@@ -64,7 +64,7 @@ body {
 
 /* main crece y empuja el footer al fondo */
 main {
-  /* flex: 1 0 auto; */
+  flex: 1 0 auto;
   padding-block: 5rem;
 }
 

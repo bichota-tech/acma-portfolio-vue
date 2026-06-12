@@ -1,14 +1,14 @@
 <template>
   <div class="identity flex items-center justify-center">
     <button
-      class="logo-btn flex items-baseline cursor-pointer"
+      class="logo-btn flex items-center cursor-pointer"
       @click="goHome"
       aria-label="Ir a inicio"
     >
-      <span class="font-primary font-bold neon text-[clamp(1.6rem,3vw,1.7rem)]">
+      <span class="font-secondary neon text-[clamp(1.2rem,3vw,1.5rem)] ">
         //
       </span>
-      <span class="text-[var(--text-primary)] font-primary font-bold text-[clamp(1.6rem,3vw,1.8rem)]">
+      <span class="text-[var(--text-primary)] font-secondary font-semibold text-[clamp(1.6rem,3vw,1.8rem)]">
         ACMA
       </span>
     </button>
@@ -21,6 +21,7 @@
   top: .5rem;
   left: 2rem;
   z-index: 200;
+
 }
 
 .logo-btn {
