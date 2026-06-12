@@ -166,8 +166,10 @@ const {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap:20px;
   width: 100%;
   cursor: default;
+
 }
 
 .carousel-wrapperfame {
@@ -194,18 +196,18 @@ const {
 .cardfame {
   position: absolute;
   padding: 0;
-  height: 90%;
+  height: 100%;
   aspect-ratio: 9/13;
   border-radius: 24px;
   overflow: hidden;
   transition: transform 0.8s ease, opacity 0.6s ease, filter 0.6s ease;
-  filter: blur(2px);
+  filter: blur(8px);
   opacity: 0;
   z-index: 0;
 }
 
 @media (max-width: 800px) {
-  
+
 
   .carousel-wrapperfame {
     height: 55vh;

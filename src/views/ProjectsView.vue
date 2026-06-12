@@ -1,6 +1,6 @@
 <template>
-  <section class="project view-section flex flex-col items-center justify-center">
-    <h1 class="text-3xl font-bold mb-6 text-white">Proyectos</h1>
+  <section class="project flex flex-col items-center justify-initial">
+    <h1 class="text-3xl font-bold my-6! text-white">Proyectos</h1>
     <ProjectsCarousel v-if="projects.length > 0" :projects="projects" />
     <!-- Loader Fallback -->
     <div v-else class="flex flex-col items-center justify-center py-20">
@@ -37,7 +37,8 @@ onMounted(async () => {
 
 <style scoped>
 .project {
+  width: 100%;
   color: var(--text-primary);
-  min-height: calc(100vh - 80px); /* Ajuste aproximado para el header */
+  min-height: calc(100dvh - 120px); /* Ajuste aproximado para el header */
 }
 </style>
