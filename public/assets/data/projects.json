@@ -4,34 +4,39 @@
     "description": "Desarrollo de web corporativa en WordPress para cliente final, realizado en entorno profesional de agencia. Optimizada para SEO y rendimiento.",
     "technologies": ["WordPress", "Elementor", "Maquetado", "CSS3", "SEO", "Accesibilidad web", "Responsive"],
     "url": "https://www.hidraulicaweldingboss.com/",
-    "videoSrc": "/assets/demos/iPhone-13-PRO-hidraulica.webm"
+    "videoSrc": "/assets/demos/iPhone-13-PRO-hidraulica.webm",
+    "posterSrc": "/assets/demos/thumbnails/hidraulica.webp"
   },
   "excursiones": {
     "title": "Excursiones Cartas",
     "description": "Landing web para promoción de servicios turísticos académicos, con lógica client-side para gestión de eventos y transiciones, enfocada en experiencia de usuario y navegación fluida.",
     "technologies": ["HTML5", "CSS3", "JavaScript Vanilla", "Responsive", "Bootstrap", "Usabilidad", "Accesibilidad básica", "GitHub Pages"],
     "url": "https://bichota-tech.github.io/excursionescartas/",
-    "videoSrc": "/assets/demos/excursionescartas.webm"
+    "videoSrc": "/assets/demos/excursionescartas.webm",
+    "posterSrc": "/assets/demos/thumbnails/excursiones.webp"
   },
   "hevca": {
     "title": "Hevca PhotoArt",
     "description": "Landing web promocional de fotografía profesional, con galería interactiva y carrusel implementados mediante JavaScript y librerías ligeras de frontend. Enfocada en rendimiento, carga optimizada de imágenes y experiencia visual fluida.",
     "technologies": ["HTML5", "CSS3", "JavaScript", "JSON", "Responsive", "Bootstrap", "Librerías JS", "GitHub Pages"],
     "url": "https://bichota-tech.github.io/Galeria_Virtual/",
-    "videoSrc": "/assets/demos/hevca_prueba.webm"
+    "videoSrc": "/assets/demos/hevca_prueba.webm",
+    "posterSrc": "/assets/demos/thumbnails/hevca.webp"
   },
   "limpieza": {
     "title": "Limpiezas Violeta y Verde",
     "description": "Desarrollo de web corporativa en WordPress para cliente final, realizado en entorno profesional de agencia. Optimizada para SEO y rendimiento.",
     "technologies": ["WordPress", "Elementor", "Maquetado", "CSS3", "SEO", "Accesibilidad web", "Responsive"],
     "url": "https://www.limpiezasvioletayverde.com/",
-    "videoSrc": "/assets/demos/iPhone-13-PROlimpiezasvioletayverde.webm"
+    "videoSrc": "/assets/demos/iPhone-13-PROlimpiezasvioletayverde.webm",
+    "posterSrc": "/assets/demos/thumbnails/limpieza.webp"
   },
   "acma": {
     "title": "Portfolio Web Frontend",
     "description": "Portfolio personal desarrollado como SPA, con arquitectura frontend basada en vistas y componentes, enrutado client-side y navegación sin recargas. Enfocado en accesibilidad, rendimiento y mantenibilidad del código, con despliegue optimizado en Vercel.",
     "technologies": ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Librerías JS", "SPA", "Accesibilidad web", "Responsive", "Vercel", "Client-side routing"],
     "url": "https://portfolio-blue-iota-62.vercel.app/",
-    "videoSrc": "/assets/demos/iPhone-13-PRO-ACMA-FrontendDev.webm"
+    "videoSrc": "/assets/demos/iPhone-13-PRO-ACMA-FrontendDev.webm",
+    "posterSrc": "/assets/demos/thumbnails/acma.webp"
   }
 }

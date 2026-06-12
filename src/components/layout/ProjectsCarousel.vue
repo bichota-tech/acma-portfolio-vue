@@ -26,6 +26,7 @@
             loop
             muted
             playsinline
+            :poster="project.posterSrc"
             class="w-full h-full object-contain filter brightness-[0.85] hover:brightness-[1.05] transition-all duration-300 cursor-pointer"
           >
             <source :src="project.videoSrc" type="video/webm">
